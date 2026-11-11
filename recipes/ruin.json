@@ -1,0 +1,15 @@
+{
+    "id": "ruin",
+    "name": "Ruin",
+    "description": "Broken walls and pillars around a forgotten centre, with rubble and bones.",
+    "size": { "w": [8, 20, 11], "h": [8, 16, 10] },
+    "steps": [
+        { "type": "fill", "tags": ["soil"], "decoTags": ["soil-deco"], "decoChance": 0.15, "optional": true },
+        { "type": "focal", "any": ["statue", "shrine", "fountain", "clutter"], "anchor": "center", "zone": { "name": "ruin" }, "optional": true },
+        { "type": "outline", "any": ["wall", "pillar", "fence"], "inset": [0, 1], "fill": 0.55 },
+        { "type": "scatter", "any": ["rock", "rock-small"], "per100": [4, 8], "zone": "field", "cluster": 0.6, "optional": true },
+        { "type": "scatter", "any": ["plant"], "per100": [2, 5], "zone": "edges", "cluster": 0.5, "optional": true },
+        { "type": "decal", "tags": ["bones"], "chance": 0.06, "optional": true },
+        { "type": "decal", "tags": ["ground-deco"], "chance": 0.06, "optional": true }
+    ]
+}

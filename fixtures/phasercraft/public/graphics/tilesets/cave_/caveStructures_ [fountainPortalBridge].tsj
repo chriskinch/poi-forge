@@ -1,0 +1,309 @@
+{
+ "columns": 18,
+ "image": "caveStructures_ [fountainPortalBridge].png",
+ "imageheight": 320,
+ "imagewidth": 288,
+ "margin": 0,
+ "name": "caveStructures_ [fountainPortalBridge]",
+ "spacing": 0,
+ "tilecount": 360,
+ "tiledversion": "1.12.2",
+ "tileheight": 16,
+ "tiles": [
+  {
+   "id": 19,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "tileid": 21,
+     "duration": 150
+    },
+    {
+     "tileid": 23,
+     "duration": 150
+    },
+    {
+     "tileid": 25,
+     "duration": 150
+    },
+    {
+     "tileid": 27,
+     "duration": 150
+    }
+   ],
+   "id": 21,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "tileid": 22,
+     "duration": 150
+    },
+    {
+     "tileid": 24,
+     "duration": 150
+    },
+    {
+     "tileid": 26,
+     "duration": 150
+    },
+    {
+     "tileid": 28,
+     "duration": 150
+    }
+   ],
+   "id": 22,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "tileid": 39,
+     "duration": 150
+    },
+    {
+     "tileid": 41,
+     "duration": 150
+    },
+    {
+     "tileid": 43,
+     "duration": 150
+    },
+    {
+     "tileid": 45,
+     "duration": 150
+    }
+   ],
+   "id": 39,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "tileid": 40,
+     "duration": 150
+    },
+    {
+     "tileid": 42,
+     "duration": 150
+    },
+    {
+     "tileid": 44,
+     "duration": 150
+    },
+    {
+     "tileid": 46,
+     "duration": 150
+    }
+   ],
+   "id": 40,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 321,
+   "properties": [
+    {
+     "name": "ground",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 339,
+   "properties": [
+    {
+     "name": "ground",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  }
+ ],
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10"
+}
