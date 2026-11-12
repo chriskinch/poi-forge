@@ -1,0 +1,14 @@
+{
+    "generic": {
+        "label": "Generic",
+        "roots": { "maps": "maps", "tilesets": "tilesets", "sources": "sources" }
+    },
+    "phasercraft": {
+        "label": "Phasercraft",
+        "roots": {
+            "maps": "assets/maps/poi",
+            "tilesets": "public/graphics/tilesets",
+            "sources": "assets/source"
+        }
+    }
+}

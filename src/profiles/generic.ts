@@ -1,12 +1,13 @@
 /** A neutral profile for any Tiled project: four layers, one `collides` flag. */
 import { cellOf } from "../core/doc";
 import { baseIssues, type Profile } from "../core/profile";
+import ROOTS from "./roots.json";
 
 export const generic: Profile = {
     id: "generic",
-    label: "Generic",
+    label: ROOTS.generic.label,
     tileSize: 16,
-    roots: { maps: "maps", tilesets: "tilesets", sources: "sources" },
+    roots: ROOTS.generic.roots,
     tileLayers: ["ground", "details", "structures", "overhead"],
     objectLayers: ["objects"],
     propLayers: ["structures", "overhead"],

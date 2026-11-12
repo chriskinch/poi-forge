@@ -1,6 +1,6 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import { fileApi } from "./server/fileApi";
+import { fileApi } from "./server/fileApi.ts";
 
 export default defineConfig({
     plugins: [react(), fileApi()],

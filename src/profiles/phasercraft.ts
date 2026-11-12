@@ -6,6 +6,7 @@ import { cellOf, type Catalog, type Grid, type TilesetEntry } from "../core/doc"
 import { baseIssues, type Issue, type Profile } from "../core/profile";
 import { rng } from "../core/rng";
 import { tileProps } from "../core/tileset";
+import ROOTS from "./roots.json";
 
 const TILE_LAYERS = ["terrain", "terrain props", "paths", "structure", "structure props"];
 const OBJECT_LAYERS = ["POI", "spawn", "collision map"];
@@ -162,13 +163,9 @@ function tileProblem(entry: TilesetEntry, tile: number, layer: string): string |
 
 export const phasercraft: Profile = {
     id: "phasercraft",
-    label: "Phasercraft",
+    label: ROOTS.phasercraft.label,
     tileSize: 16,
-    roots: {
-        maps: "assets/maps/poi",
-        tilesets: "public/graphics/tilesets",
-        sources: "assets/source",
-    },
+    roots: ROOTS.phasercraft.roots,
     tileLayers: TILE_LAYERS,
     objectLayers: OBJECT_LAYERS,
     propLayers: PROP_LAYERS,

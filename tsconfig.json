@@ -13,7 +13,7 @@
         "skipLibCheck": true,
         "isolatedModules": true,
         "resolveJsonModule": true,
-        "allowImportingTsExtensions": false,
+        "allowImportingTsExtensions": true,
         "types": ["node", "vite/client"]
     },
     "include": ["src", "server", "scripts", "vite.config.ts", "vitest.config.ts"]

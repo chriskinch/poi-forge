@@ -8,10 +8,26 @@ import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { basename, dirname, extname, join, relative, resolve } from "node:path";
 import type { Plugin } from "vite";
-import { profileById } from "../src/profiles";
-import { PathError, resolveForWrite, resolveIn, type Roots } from "./paths";
+import { PathError, resolveForWrite, resolveIn, type Roots } from "./paths.ts";
 
 const TOOL_ROOT = resolve(import.meta.dirname, "..");
+
+interface ProfileRoots {
+    label: string;
+    roots: { maps: string; tilesets: string; sources?: string };
+}
+
+/**
+ * Where each profile keeps its files. Read as data rather than imported from
+ * the app's source, so the server depends on nothing it has to compile.
+ */
+function profileRoots(id: string): { id: string } & ProfileRoots {
+    const table = JSON.parse(
+        readFileSync(resolve(TOOL_ROOT, "src/profiles/roots.json"), "utf8"),
+    ) as Record<string, ProfileRoots>;
+    const known = table[id] ? id : "generic";
+    return { id: known, ...table[known]! };
+}
 
 interface Config {
     project: string;
@@ -76,7 +92,7 @@ export function fileApi(): Plugin {
         name: "poi-forge-file-api",
         configureServer(server) {
             const config = loadConfig();
-            const profile = profileById(config.profile);
+            const profile = profileRoots(config.profile);
             const roots: Roots = {
                 project: config.project,
                 lib: resolve(TOOL_ROOT, "libraries", profile.id),

@@ -8,9 +8,9 @@
         "node": ">=22"
     },
     "scripts": {
-        "dev": "vite --configLoader bundle",
-        "start": "vite --configLoader bundle",
-        "build": "vite build --configLoader bundle",
+        "dev": "vite",
+        "start": "vite",
+        "build": "vite build",
         "typecheck": "tsc --noEmit",
         "lint": "eslint .",
         "test": "vitest run",

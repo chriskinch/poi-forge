@@ -26,7 +26,7 @@ try {
 
 const project = mkdtempSync(join(tmpdir(), "poi-forge-e2e-"));
 cpSync(join(ROOT, "demo"), project, { recursive: true });
-const server = spawn("npx", ["vite", "--configLoader", "bundle", "--port", String(PORT), "--strictPort"], {
+const server = spawn("npx", ["vite", "--port", String(PORT), "--strictPort"], {
     cwd: ROOT,
     env: { ...process.env, POI_PROJECT: project, POI_PROFILE: "generic" },
     stdio: "ignore",
