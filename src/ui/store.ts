@@ -87,6 +87,8 @@ export interface State extends Snapshot {
     ready: boolean;
     fatal: string | null;
     project: api.ServerConfig | null;
+    /** Where files come from: the dev server, the bundled demo, or a picked folder. */
+    backend: api.BackendKind;
     profile: Profile;
     savedDefs: Record<string, TiledTileset>;
     savedLibraries: Record<string, PrefabLibrary>;
@@ -126,6 +128,8 @@ export interface State extends Snapshot {
     toast: { text: string; kind: "info" | "error" } | null;
 
     init: () => Promise<void>;
+    /** Asks for a folder and reloads the app on it. Browser builds only. */
+    openFolder: (profileId: string) => Promise<void>;
     set: (partial: Partial<State>) => void;
     notify: (text: string, kind?: "info" | "error") => void;
     loadImage: (name: string) => void;
@@ -171,6 +175,7 @@ export const useStore = create<State>((set, get) => ({
     ready: false,
     fatal: null,
     project: null,
+    backend: "server",
     profile: generic,
     map: null,
     sets: [],
@@ -235,7 +240,9 @@ export const useStore = create<State>((set, get) => ({
 
     async init() {
         try {
+            const backend = await api.connect();
             const project = await api.config();
+            set({ backend });
             const profile = profileById(project.profile);
             if (!project.exists) {
                 set({ project, profile, fatal: `Project folder not found: ${project.project}` });
@@ -312,6 +319,47 @@ export const useStore = create<State>((set, get) => ({
         }
     },
 
+    async openFolder(profileId) {
+        const profile = profileById(profileId);
+        try {
+            await api.openFolder(profile.id, [profile.roots.maps, profile.roots.tilesets]);
+        } catch (error) {
+            // Closing the picker is not an error worth reporting.
+            if ((error as Error).name !== "AbortError")
+                get().notify((error as Error).message, "error");
+            return;
+        }
+        set({
+            ready: false,
+            fatal: null,
+            map: null,
+            sets: [],
+            savedMap: null,
+            docPath: null,
+            catalog: {},
+            libraries: {},
+            savedDefs: {},
+            savedLibraries: {},
+            images: {},
+            rawImages: [],
+            mapFiles: [],
+            past: [],
+            future: [],
+            stamp: null,
+            sheetSel: null,
+            mapSel: null,
+            selectedObject: null,
+            swapTarget: null,
+            selectedPrefab: null,
+            locks: [],
+            candidates: [],
+            candidate: null,
+            previewContext: "",
+            genParams: { ...get().genParams, themes: [] },
+        });
+        await get().init();
+    },
+
     loadImage(name) {
         const state = get();
         const entry = state.catalog[name];
@@ -328,8 +376,9 @@ export const useStore = create<State>((set, get) => ({
                 },
             });
         };
-        image.onerror = () => set({ images: { ...get().images, [name]: "error" } });
-        image.src = api.fileUrl("project", entry.imagePath, state.imageVersion);
+        const failed = () => set({ images: { ...get().images, [name]: "error" } });
+        image.onerror = failed;
+        api.imageUrl("project", entry.imagePath).then((url) => (image.src = url), failed);
     },
 
     reloadImage(name) {
@@ -488,8 +537,8 @@ export const useStore = create<State>((set, get) => ({
             return null;
         }
         const image = new Image();
-        image.src = api.fileUrl("project", imagePath, state.imageVersion);
         try {
+            image.src = await api.imageUrl("project", imagePath);
             await image.decode();
         } catch {
             state.notify(`Could not read ${imagePath}`, "error");

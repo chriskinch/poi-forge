@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { resizeMap } from "../core/doc";
 import { basename } from "../core/path";
+import { PROFILES } from "../profiles";
+import { canOpenFolder } from "./api";
 import { GeneratePanel, GenerateStage } from "./GenerateWorkspace";
 import { MapCanvas } from "./MapCanvas";
 import { Modal, NumberField } from "./Modal";
@@ -129,6 +131,65 @@ function Resize({ onClose }: { onClose: () => void }) {
     );
 }
 
+function OpenFolder({ onClose }: { onClose: () => void }) {
+    const openFolder = useStore((state) => state.openFolder);
+    const dirty = useStore(isDirty);
+    const [profile, setProfile] = useState("phasercraft");
+    const chosen = PROFILES[profile]!;
+    const supported = canOpenFolder();
+    return (
+        <Modal title="Open a project folder" onClose={onClose}>
+            {supported ? (
+                <p className="hint">
+                    Pick your project's root folder. The browser asks for permission; files are read
+                    and written straight on your disk and never uploaded.
+                </p>
+            ) : (
+                <p className="notice">
+                    This browser can't open folders. Use Chrome or Edge, or run the tool locally
+                    with <code>npm start</code>.
+                </p>
+            )}
+            <label className="field">
+                <span>Profile</span>
+                <select
+                    value={profile}
+                    onChange={(event) => setProfile(event.target.value)}
+                    data-testid="folder-profile"
+                >
+                    {Object.values(PROFILES).map((item) => (
+                        <option key={item.id} value={item.id}>
+                            {item.label}
+                        </option>
+                    ))}
+                </select>
+            </label>
+            <p className="hint">
+                Maps in <code>{chosen.roots.maps}/</code>, tilesets in{" "}
+                <code>{chosen.roots.tilesets}/</code>. Only .tmj, .tsj and .png files in those
+                folders are ever written. Prefab library edits are kept in this browser.
+            </p>
+            {dirty && (
+                <p className="notice">Unsaved changes in the current project will be lost.</p>
+            )}
+            <footer>
+                <button onClick={onClose}>Cancel</button>
+                <button
+                    className="primary"
+                    disabled={!supported}
+                    onClick={() => {
+                        onClose();
+                        void openFolder(profile);
+                    }}
+                    data-testid="folder-open"
+                >
+                    Choose folder…
+                </button>
+            </footer>
+        </Modal>
+    );
+}
+
 function useShortcuts() {
     useEffect(() => {
         const onKey = (event: KeyboardEvent) => {
@@ -191,7 +252,7 @@ function useShortcuts() {
 export function App() {
     const state = useStore();
     const [zoom, setZoom] = useState(3);
-    const [dialog, setDialog] = useState<"new" | "resize" | null>(null);
+    const [dialog, setDialog] = useState<"new" | "resize" | "folder" | null>(null);
     const init = useStore((s) => s.init);
     useShortcuts();
 
@@ -240,6 +301,15 @@ export function App() {
                 <span className="project" title={state.project?.project}>
                     {state.project?.name} · {state.profile.label}
                 </span>
+                {state.backend !== "server" && (
+                    <button
+                        onClick={() => setDialog("folder")}
+                        title="Work on a project folder on this computer"
+                        data-testid="open-folder"
+                    >
+                        Open folder…
+                    </button>
+                )}
                 <select
                     value={docPath ?? ""}
                     onChange={(event) => open(event.target.value)}
@@ -350,6 +420,11 @@ export function App() {
 
             <footer className="statusbar">
                 <Problems />
+                {state.backend === "demo" && (
+                    <span className="warn" data-testid="demo-note">
+                        Demo project: saves stay in this tab. Open a folder to work on real files.
+                    </span>
+                )}
                 <span className="spacer" />
                 {map && (
                     <span className="hint">
@@ -359,6 +434,7 @@ export function App() {
             </footer>
 
             {state.toast && <div className={`toast ${state.toast.kind}`}>{state.toast.text}</div>}
+            {dialog === "folder" && <OpenFolder onClose={() => setDialog(null)} />}
             {dialog === "new" && <NewMap onClose={() => setDialog(null)} />}
             {dialog === "resize" && map && <Resize onClose={() => setDialog(null)} />}
         </div>
