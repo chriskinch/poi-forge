@@ -9,8 +9,7 @@
     "steps": [
         {
             "type": "fill",
-            "tags": ["soil"],
-            "decoTags": ["soil-deco"],
+            "any": ["soil", "grass"],
             "decoChance": 0.15,
             "optional": true
         },

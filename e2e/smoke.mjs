@@ -57,10 +57,10 @@ try {
     await page.waitForTimeout(800);
     const state = (expr) =>
         page.evaluate(`(() => { const s = window.poiForge.getState(); return ${expr}; })()`);
-    const mapFile = join(project, "maps/entrance.tmj");
+    const mapFile = join(project, "maps/forest-camp.tmj");
     const original = readFileSync(mapFile, "utf8");
 
-    check("opens the demo map", (await state("s.docPath")) === "maps/entrance.tmj");
+    check("opens the demo map", (await state("s.docPath")) === "maps/forest-camp.tmj");
     check(
         "no problems in the demo map",
         (await page.textContent("[data-testid=problems] summary")) === "No problems",
@@ -72,10 +72,13 @@ try {
 
     // Paint one tile, save, undo, save: back to the original bytes.
     const sheet = await page.locator("[data-testid=sheet]").boundingBox();
-    await page.mouse.click(sheet.x + 6 * 32 + 16, sheet.y + 16);
-    check("selecting a tile makes a stamp", (await state("s.stamp && s.stamp.label")) === "demo:6");
+    await page.mouse.click(sheet.x + 4 * 32 + 16, sheet.y + 3 * 32 + 16);
+    check(
+        "selecting a tile makes a stamp",
+        (await state("s.stamp && s.stamp.label")) === "forestPath_:28",
+    );
     const map = await page.locator("[data-testid=map]").boundingBox();
-    await page.mouse.click(map.x + 24, map.y + 9 * 48 + 24);
+    await page.mouse.click(map.x + 24, map.y + 8 * 48 + 24);
     check("painting records an undo step", (await state("s.past.length")) === 1);
     await page.click("[data-testid=save]");
     await page.waitForTimeout(300);
@@ -91,31 +94,34 @@ try {
     // Tile properties and animation.
     await page.click("[data-testid=mode-tileset]");
     const big = await page.locator("[data-testid=sheet]").boundingBox();
-    await page.mouse.click(big.x + 4 * 48 + 24, big.y + 24);
+    await page.mouse.click(big.x + 6 * 48 + 24, big.y + 48 + 24);
     await page.click("[data-testid=prop-collides-on]");
     check(
         "sets a tile property",
         (
-            await state("JSON.stringify(s.catalog.demo.def.tiles.find(t => t.id === 4).properties)")
+            await state(
+                "JSON.stringify(s.catalog.forestPath_.def.tiles.find(t => t.id === 14).properties)",
+            )
         ).includes("collides"),
     );
     await page.click("[data-testid=undo]");
     await page.click("[data-testid=tab-anim]");
-    await page.mouse.click(big.x + 24, big.y + 24);
+    await page.mouse.click(big.x + 4 * 48 + 24, big.y + 3 * 48 + 24);
     await page.click("[data-testid=anim-fill]");
     check(
         "auto-fills an animation",
-        (await state("s.catalog.demo.def.tiles.find(t => t.id === 0).animation.length")) === 4,
+        (await state("s.catalog.forestPath_.def.tiles.find(t => t.id === 28).animation.length")) ===
+            4,
     );
     await page.click("[data-testid=undo]");
 
     // Prefab detection.
     await page.click("[data-testid=tab-prefabs]");
-    const before = await state("s.libraries.demo.prefabs.length");
+    const before = await state("s.libraries.forestPath_.prefabs.length");
     await page.click("[data-testid=detect]");
     check(
         "auto-detect proposes prefabs",
-        (await state("s.libraries.demo.prefabs.length")) >= before,
+        (await state("s.libraries.forestPath_.prefabs.length")) >= before,
     );
     await page.click("[data-testid=undo]").catch(() => {});
 

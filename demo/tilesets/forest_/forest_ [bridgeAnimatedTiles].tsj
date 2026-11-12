@@ -1,0 +1,15 @@
+{
+ "columns": 11,
+ "image": "forest_ [bridgeAnimatedTiles].png",
+ "imageheight": 160,
+ "imagewidth": 176,
+ "margin": 0,
+ "name": "forest_ [bridgeAnimatedTiles]",
+ "spacing": 0,
+ "tilecount": 110,
+ "tiledversion": "1.12.2",
+ "tileheight": 16,
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10"
+}

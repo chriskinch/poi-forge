@@ -1,0 +1,579 @@
+{
+    "version": 1,
+    "tileset": "forest_",
+    "themes": [
+        "forest"
+    ],
+    "prefabs": [
+        {
+            "id": "grass",
+            "name": "Grass",
+            "tags": [
+                "grass"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 46
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-30",
+            "name": "Grass detail 30",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 30
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-31",
+            "name": "Grass detail 31",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 31
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-32",
+            "name": "Grass detail 32",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 32
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-33",
+            "name": "Grass detail 33",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 33
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-52",
+            "name": "Grass detail 52",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 52
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-53",
+            "name": "Grass detail 53",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 53
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-54",
+            "name": "Grass detail 54",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 54
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-55",
+            "name": "Grass detail 55",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 55
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-76",
+            "name": "Grass detail 76",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 76
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-77",
+            "name": "Grass detail 77",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 77
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-98",
+            "name": "Grass detail 98",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 98
+                }
+            ]
+        },
+        {
+            "id": "grass-deco-99",
+            "name": "Grass detail 99",
+            "tags": [
+                "grass-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 99
+                }
+            ]
+        },
+        {
+            "id": "plateau",
+            "name": "Plateau",
+            "tags": [
+                "backdrop"
+            ],
+            "kind": "stretch",
+            "w": 3,
+            "h": 4,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 23
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 24
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 27
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 45
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 46
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 49
+                },
+                {
+                    "dx": 0,
+                    "dy": 2,
+                    "layer": "structures",
+                    "tile": 67
+                },
+                {
+                    "dx": 1,
+                    "dy": 2,
+                    "layer": "details",
+                    "tile": 68
+                },
+                {
+                    "dx": 2,
+                    "dy": 2,
+                    "layer": "structures",
+                    "tile": 71
+                },
+                {
+                    "dx": 0,
+                    "dy": 3,
+                    "layer": "structures",
+                    "tile": 89
+                },
+                {
+                    "dx": 1,
+                    "dy": 3,
+                    "layer": "structures",
+                    "tile": 90
+                },
+                {
+                    "dx": 2,
+                    "dy": 3,
+                    "layer": "structures",
+                    "tile": 93
+                }
+            ],
+            "stretch": {
+                "left": 1,
+                "right": 1
+            }
+        },
+        {
+            "id": "cave-mouth",
+            "name": "Cave mouth",
+            "tags": [
+                "entrance"
+            ],
+            "kind": "fixed",
+            "w": 4,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 72
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 73
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 74
+                },
+                {
+                    "dx": 3,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 75
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 94
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 95
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 96
+                },
+                {
+                    "dx": 3,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 97
+                }
+            ]
+        },
+        {
+            "id": "mound",
+            "name": "Mound",
+            "tags": [
+                "mound"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 28
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 29
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 50
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 51
+                }
+            ]
+        },
+        {
+            "id": "stone-circle",
+            "name": "Stone circle",
+            "tags": [
+                "shrine",
+                "stone-circle"
+            ],
+            "kind": "fixed",
+            "w": 3,
+            "h": 3,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 38
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 39
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 40
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 60
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 61
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 62
+                },
+                {
+                    "dx": 0,
+                    "dy": 2,
+                    "layer": "details",
+                    "tile": 82
+                },
+                {
+                    "dx": 1,
+                    "dy": 2,
+                    "layer": "details",
+                    "tile": 83
+                },
+                {
+                    "dx": 2,
+                    "dy": 2,
+                    "layer": "details",
+                    "tile": 84
+                }
+            ]
+        },
+        {
+            "id": "rubble",
+            "name": "Rubble",
+            "tags": [
+                "rubble"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 3,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 41
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 42
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 63
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 64
+                },
+                {
+                    "dx": 0,
+                    "dy": 2,
+                    "layer": "details",
+                    "tile": 85
+                },
+                {
+                    "dx": 1,
+                    "dy": 2,
+                    "layer": "details",
+                    "tile": 86
+                }
+            ]
+        },
+        {
+            "id": "pond",
+            "name": "Pond",
+            "tags": [
+                "fountain",
+                "pond"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 114
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 115
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 136
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 137
+                }
+            ]
+        }
+    ]
+}

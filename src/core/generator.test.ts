@@ -135,6 +135,28 @@ describe("generator", () => {
         expect(themesOf(themed)).toEqual(["cave"]);
     });
 
+    it("varies the ground only with that ground's own deco tiles", () => {
+        const one = (id: string, tag: string, tile: number) => ({
+            ...ctx.prefabs[0]!,
+            id,
+            tags: [tag],
+            cells: [{ dx: 0, dy: 0, layer: "paths", tile }],
+        });
+        const prefabs = [
+            one("grass", "grass", 100),
+            one("tuft", "grass-deco", 101),
+            one("pebbles", "soil-deco", 2),
+        ];
+        const recipe = {
+            ...entrance,
+            steps: [{ type: "fill" as const, any: ["soil", "grass"], decoChance: 0.5 }],
+        };
+        const tiles = new Set(
+            generate(recipe, params, { ...ctx, prefabs }).layers.paths!.map((cell) => cell!.tile),
+        );
+        expect([...tiles].sort()).toEqual([100, 101]);
+    });
+
     it("reports when nothing matches at all", () => {
         expect(generate(entrance, params, { ...ctx, prefabs: [] }).problems).toContain(
             "No prefab matched any step",
