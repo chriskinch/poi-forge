@@ -1,7 +1,14 @@
 import { instanceAt, swapCandidates, swapChanges, type LibPrefab } from "../../core/prefab";
 import { prefabStamp, prefabThumb, sheetStamp } from "../helpers";
 import { SheetCanvas } from "../SheetCanvas";
-import { useGrids, useInstances, usePrefabs, useStore, type Rect } from "../store";
+import {
+    useGrids,
+    useInstances,
+    usePrefabs,
+    useStore,
+    useUsablePrefabs,
+    type Rect,
+} from "../store";
 import { Thumb } from "../Thumb";
 import { TilesetPicker } from "./TilesetPicker";
 
@@ -26,10 +33,12 @@ export function PrefabButton({
     prefab,
     onClick,
     active,
+    showSheet,
 }: {
     prefab: LibPrefab;
     onClick: () => void;
     active?: boolean;
+    showSheet?: boolean;
 }) {
     const order = useStore((state) => state.profile.tileLayers);
     const thumb = prefabThumb(
@@ -45,6 +54,7 @@ export function PrefabButton({
         >
             <Thumb layers={thumb.layers} width={thumb.width} height={thumb.height} scale={2} />
             <span>{prefab.name}</span>
+            {showSheet && <span>{prefab.tileset}</span>}
         </button>
     );
 }
@@ -85,7 +95,8 @@ export function Palette() {
     };
 
     const instance = swapTarget ? instanceAt(instances, swapTarget.x, swapTarget.y) : undefined;
-    const candidates = instance ? swapCandidates(instance.prefab, prefabs) : [];
+    const { usable } = useUsablePrefabs();
+    const candidates = instance ? swapCandidates(instance.prefab, usable) : [];
     const mine = prefabs.filter((prefab) => prefab.tileset === activeTileset);
 
     return (
@@ -116,6 +127,7 @@ export function Palette() {
                                     <PrefabButton
                                         key={`${prefab.tileset}/${prefab.id}`}
                                         prefab={prefab}
+                                        showSheet
                                         onClick={() => state.paint(swapChanges(instance, prefab))}
                                     />
                                 ))}

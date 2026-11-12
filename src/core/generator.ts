@@ -383,7 +383,9 @@ function ring(state: State, step: Extract<Step, { type: "ring" }>) {
     const sweep = Math.PI * 2 - open;
     const same = state.params.symmetry ? choose(state, options) : undefined;
     for (let i = 0; i < count; i++) {
-        const t = count === 1 ? 0.5 : i / (count - 1);
+        // Centre each item in its share of the arc, so a pair sits either
+        // side rather than hugging the open south.
+        const t = (i + 0.5) / count;
         const angle =
             start + sweep * t + (state.params.symmetry ? 0 : (state.random() - 0.5) * 0.4);
         const prefab = same ?? choose(state, options);
@@ -451,8 +453,18 @@ function scatter(state: State, step: Extract<Step, { type: "scatter" }>) {
         count--;
         last = [x, y];
         if (state.params.symmetry) {
-            const mx = state.w - x - prefab.w;
-            if (mx !== x && putNearExact(state, "scatter", prefab, mx, y)) count--;
+            // Balance, not a mirror image: loose items answer each other
+            // across the lane with a different pick, a row or so off.
+            const twin = choose(state, options);
+            const mx = state.w - x - twin.w;
+            const my = y + int(state.random, -1, 1);
+            if (
+                mx !== x &&
+                inZone(state, step.zone, mx, my) &&
+                putNearExact(state, "scatter", twin, mx, my)
+            ) {
+                count--;
+            }
         }
     }
 }

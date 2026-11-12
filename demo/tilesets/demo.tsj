@@ -1,0 +1,305 @@
+{
+ "columns": 8,
+ "image": "demo.png",
+ "imageheight": 80,
+ "imagewidth": 128,
+ "margin": 0,
+ "name": "demo",
+ "spacing": 0,
+ "tilecount": 40,
+ "tiledversion": "1.12.2",
+ "tileheight": 16,
+ "tiles": [
+  {
+   "id": 6,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 140,
+     "tileid": 24
+    },
+    {
+     "duration": 140,
+     "tileid": 25
+    },
+    {
+     "duration": 140,
+     "tileid": 26
+    }
+   ],
+   "id": 24,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 120,
+     "tileid": 27
+    },
+    {
+     "duration": 120,
+     "tileid": 28
+    },
+    {
+     "duration": 120,
+     "tileid": 29
+    }
+   ],
+   "id": 27,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  }
+ ],
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10"
+}

@@ -2,7 +2,10 @@
     "id": "entrance",
     "name": "Entrance",
     "description": "A doorway set into a ridge: cave mouth, mine, crypt. Lights flank a clear lane to the south.",
-    "size": { "w": [8, 20, 10], "h": [8, 16, 10] },
+    "size": {
+        "w": [8, 20, 10],
+        "h": [8, 16, 10]
+    },
     "steps": [
         {
             "type": "fill",
@@ -11,21 +14,25 @@
             "decoChance": 0.12,
             "optional": true
         },
-        { "type": "backdrop", "tags": ["backdrop"] },
+        {
+            "type": "backdrop",
+            "tags": ["backdrop"]
+        },
         {
             "type": "focal",
             "tags": ["entrance"],
             "anchor": "backdrop",
-            "zone": { "name": "dungeon-entrance" }
+            "zone": {
+                "name": "dungeon-entrance"
+            }
         },
         {
-            "type": "flank",
+            "type": "apron",
             "tags": ["apron"],
-            "pairs": [1, 1],
-            "gap": [0, 0],
-            "row": [1, 1],
+            "depth": [2, 2],
+            "pad": [0, 1],
             "optional": true,
-            "chance": 0.8
+            "chance": 0.7
         },
         {
             "type": "flank",
@@ -51,7 +58,17 @@
             "cluster": 0.4,
             "optional": true
         },
-        { "type": "decal", "tags": ["bones"], "chance": 0.04, "optional": true },
-        { "type": "decal", "tags": ["ground-deco"], "chance": 0.05, "optional": true }
+        {
+            "type": "decal",
+            "tags": ["bones"],
+            "chance": 0.04,
+            "optional": true
+        },
+        {
+            "type": "decal",
+            "tags": ["ground-deco"],
+            "chance": 0.05,
+            "optional": true
+        }
     ]
 }

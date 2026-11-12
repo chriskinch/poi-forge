@@ -1,0 +1,466 @@
+{
+    "version": 1,
+    "tileset": "demo",
+    "themes": [],
+    "prefabs": [
+        {
+            "id": "soil",
+            "name": "Soil",
+            "tags": [
+                "soil"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 1
+                }
+            ]
+        },
+        {
+            "id": "soil-a",
+            "name": "Worn soil A",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 2
+                }
+            ]
+        },
+        {
+            "id": "soil-b",
+            "name": "Worn soil B",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 3
+                }
+            ]
+        },
+        {
+            "id": "skull",
+            "name": "Skull",
+            "tags": [
+                "bones"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 4
+                }
+            ]
+        },
+        {
+            "id": "flowers",
+            "name": "Flowers",
+            "tags": [
+                "ground-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 5
+                }
+            ]
+        },
+        {
+            "id": "pebble",
+            "name": "Pebble",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 6
+                }
+            ]
+        },
+        {
+            "id": "bush",
+            "name": "Bush",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 7
+                }
+            ]
+        },
+        {
+            "id": "ridge",
+            "name": "Ridge",
+            "tags": [
+                "backdrop"
+            ],
+            "kind": "stretch",
+            "w": 3,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 8
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 9
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 10
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 16
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 17
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 18
+                }
+            ],
+            "stretch": {
+                "left": 1,
+                "right": 1
+            }
+        },
+        {
+            "id": "door",
+            "name": "Door",
+            "tags": [
+                "entrance"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 11
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 12
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 19
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 20
+                }
+            ]
+        },
+        {
+            "id": "tree",
+            "name": "Tree",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 13
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 21
+                }
+            ]
+        },
+        {
+            "id": "statue",
+            "name": "Statue",
+            "tags": [
+                "statue",
+                "shrine"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 14
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 22
+                }
+            ]
+        },
+        {
+            "id": "pillar",
+            "name": "Pillar",
+            "tags": [
+                "pillar"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 15
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 23
+                }
+            ]
+        },
+        {
+            "id": "torch",
+            "name": "Torch",
+            "tags": [
+                "light"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 24
+                }
+            ]
+        },
+        {
+            "id": "campfire",
+            "name": "Campfire",
+            "tags": [
+                "fire"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 27
+                }
+            ]
+        },
+        {
+            "id": "tent",
+            "name": "Tent",
+            "tags": [
+                "tent"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 30
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 31
+                }
+            ]
+        },
+        {
+            "id": "rock",
+            "name": "Big rock",
+            "tags": [
+                "rock"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 32
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 33
+                }
+            ]
+        },
+        {
+            "id": "crate",
+            "name": "Crate",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 34
+                }
+            ]
+        },
+        {
+            "id": "wall",
+            "name": "Wall block",
+            "tags": [
+                "wall"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 35
+                }
+            ]
+        },
+        {
+            "id": "fence",
+            "name": "Fence",
+            "tags": [
+                "fence"
+            ],
+            "kind": "stretch",
+            "w": 3,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 36
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 37
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 38
+                }
+            ],
+            "stretch": {
+                "left": 1,
+                "right": 1
+            }
+        },
+        {
+            "id": "deck",
+            "name": "Stone deck",
+            "tags": [
+                "apron"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 39
+                }
+            ]
+        }
+    ]
+}

@@ -8,10 +8,9 @@ import {
     type GenResult,
 } from "../core/generator";
 import { RECIPES, recipeById } from "../core/recipes";
-import { usablePrefabs } from "../core/prefab";
 import { tileProps } from "../core/tileset";
 import { NumberField } from "./Modal";
-import { editContext, useGrids, usePrefabs, useStore } from "./store";
+import { editContext, useGrids, useStore, useUsablePrefabs } from "./store";
 import { Thumb } from "./Thumb";
 
 /** Themes on by default: the surroundings' own, plus every theme that isn't a surrounding. */
@@ -21,20 +20,9 @@ function defaultThemes(all: string[], contexts: string[], current: string): stri
 
 function useGenerator() {
     const state = useStore();
-    const all = usePrefabs();
     const grids = useGrids();
     const { profile, catalog, genParams, map, locks } = state;
-    const { usable: prefabs, rejected } = useMemo(
-        () =>
-            usablePrefabs(all, (tileset, tile, layer) => {
-                const entry = catalog[tileset];
-                if (!entry) return `Sheet "${tileset}" isn't in this project yet`;
-                if (tile >= entry.def.tilecount)
-                    return `${tileset}:${tile} is past the end of the sheet`;
-                return profile.tileProblem(entry, tile, layer);
-            }),
-        [all, catalog, profile],
-    );
+    const { usable: prefabs, rejected } = useUsablePrefabs();
     const allThemes = useMemo(() => themesOf(prefabs), [prefabs]);
     const contexts = useMemo(() => profile.contexts(catalog), [profile, catalog]);
     const themes = genParams.themes.length

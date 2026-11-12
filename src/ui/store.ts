@@ -18,6 +18,7 @@ import { basename, dirname, join } from "../core/path";
 import {
     findInstances,
     flatten,
+    usablePrefabs,
     type Instance,
     type LibPrefab,
     type PrefabLibrary,
@@ -584,6 +585,20 @@ const prefabsOf = memo((libraries: Record<string, PrefabLibrary>) =>
     flatten(Object.values(libraries)),
 );
 export const usePrefabs = (): LibPrefab[] => useStore((state) => prefabsOf(state.libraries));
+
+const usableOf = memo(
+    (libraries: Record<string, PrefabLibrary>, catalog: Catalog, profile: Profile) =>
+        usablePrefabs(prefabsOf(libraries), (tileset, tile, layer) => {
+            const entry = catalog[tileset];
+            if (!entry) return `Sheet "${tileset}" isn't in this project yet`;
+            if (tile >= entry.def.tilecount)
+                return `${tileset}:${tile} is past the end of the sheet`;
+            return profile.tileProblem(entry, tile, layer);
+        }),
+);
+/** Prefabs split into those that work in a map now and those that don't, with why. */
+export const useUsablePrefabs = () =>
+    useStore((state) => usableOf(state.libraries, state.catalog, state.profile));
 
 const instancesOf = memo(
     (
