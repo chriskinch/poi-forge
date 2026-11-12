@@ -1,0 +1,589 @@
+{
+    "version": 1,
+    "tileset": "cave_ [cliff]",
+    "themes": [
+        "cave"
+    ],
+    "prefabs": [
+        {
+            "id": "ridge",
+            "name": "Cliff ridge",
+            "tags": [
+                "backdrop"
+            ],
+            "kind": "stretch",
+            "w": 5,
+            "h": 5,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 47
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 49
+                },
+                {
+                    "dx": 3,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 50
+                },
+                {
+                    "dx": 4,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 49
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 93
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 141
+                },
+                {
+                    "dx": 3,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 142
+                },
+                {
+                    "dx": 4,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 95
+                },
+                {
+                    "dx": 0,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 323
+                },
+                {
+                    "dx": 1,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 324
+                },
+                {
+                    "dx": 2,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 324
+                },
+                {
+                    "dx": 3,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 324
+                },
+                {
+                    "dx": 4,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 325
+                },
+                {
+                    "dx": 0,
+                    "dy": 3,
+                    "layer": "structure",
+                    "tile": 369
+                },
+                {
+                    "dx": 1,
+                    "dy": 3,
+                    "layer": "structure",
+                    "tile": 370
+                },
+                {
+                    "dx": 2,
+                    "dy": 3,
+                    "layer": "structure",
+                    "tile": 370
+                },
+                {
+                    "dx": 3,
+                    "dy": 3,
+                    "layer": "structure",
+                    "tile": 370
+                },
+                {
+                    "dx": 4,
+                    "dy": 3,
+                    "layer": "structure",
+                    "tile": 371
+                },
+                {
+                    "dx": 0,
+                    "dy": 4,
+                    "layer": "structure",
+                    "tile": 415
+                },
+                {
+                    "dx": 1,
+                    "dy": 4,
+                    "layer": "structure",
+                    "tile": 416
+                },
+                {
+                    "dx": 2,
+                    "dy": 4,
+                    "layer": "structure",
+                    "tile": 416
+                },
+                {
+                    "dx": 3,
+                    "dy": 4,
+                    "layer": "structure",
+                    "tile": 416
+                },
+                {
+                    "dx": 4,
+                    "dy": 4,
+                    "layer": "structure",
+                    "tile": 417
+                }
+            ],
+            "stretch": {
+                "left": 2,
+                "right": 2
+            }
+        },
+        {
+            "id": "arch-stone",
+            "name": "Stone arch",
+            "tags": [
+                "entrance"
+            ],
+            "kind": "fixed",
+            "w": 3,
+            "h": 3,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 338
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 339
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 340
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 384
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 385
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 386
+                },
+                {
+                    "dx": 0,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 430
+                },
+                {
+                    "dx": 1,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 431
+                },
+                {
+                    "dx": 2,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 432
+                }
+            ]
+        },
+        {
+            "id": "mine-entrance",
+            "name": "Mine entrance",
+            "tags": [
+                "entrance"
+            ],
+            "kind": "fixed",
+            "w": 3,
+            "h": 3,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 200
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 201
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 202
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 246
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 247
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 248
+                },
+                {
+                    "dx": 0,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 292
+                },
+                {
+                    "dx": 1,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 293
+                },
+                {
+                    "dx": 2,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 294
+                }
+            ]
+        },
+        {
+            "id": "cave-mouth",
+            "name": "Cave mouth",
+            "tags": [
+                "entrance"
+            ],
+            "kind": "fixed",
+            "w": 3,
+            "h": 3,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 62
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 63
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 64
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 108
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 109
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 110
+                },
+                {
+                    "dx": 0,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 154
+                },
+                {
+                    "dx": 1,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 155
+                },
+                {
+                    "dx": 2,
+                    "dy": 2,
+                    "layer": "structure",
+                    "tile": 156
+                }
+            ]
+        },
+        {
+            "id": "soil-deco-282",
+            "name": "Pebbled soil 282",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 282
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-283",
+            "name": "Pebbled soil 283",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 283
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-328",
+            "name": "Pebbled soil 328",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 328
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-329",
+            "name": "Pebbled soil 329",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 329
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-374",
+            "name": "Pebbled soil 374",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 374
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-375",
+            "name": "Pebbled soil 375",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 375
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-376",
+            "name": "Pebbled soil 376",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 376
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-377",
+            "name": "Pebbled soil 377",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 377
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-420",
+            "name": "Pebbled soil 420",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 420
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-421",
+            "name": "Pebbled soil 421",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 421
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-422",
+            "name": "Pebbled soil 422",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 422
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "soil-deco-423",
+            "name": "Pebbled soil 423",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 423
+                }
+            ],
+            "weight": 0.5
+        }
+    ]
+}

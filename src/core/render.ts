@@ -29,7 +29,7 @@ export function drawList(
     tileWidth: number,
     tileHeight: number,
     catalog: Catalog,
-    time: number
+    time: number,
 ): DrawOp[] {
     const ops: DrawOp[] = [];
     for (const layer of layers) {
@@ -64,7 +64,7 @@ export function withContext(
     width: number,
     height: number,
     context: ContextResult,
-    order: readonly string[]
+    order: readonly string[],
 ): { layers: RenderLayer[]; width: number; height: number } {
     const m = context.margin;
     const W = width + m * 2;

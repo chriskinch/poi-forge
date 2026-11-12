@@ -31,22 +31,28 @@ function toProperties(record: Record<string, string | number | boolean>): TiledP
 
 export function resultToMap(
     result: GenResult,
-    options: BuildOptions
+    options: BuildOptions,
 ): { map: TiledMap; sets: ResolvedSet[] } {
     const { tileSize, tileLayers, objectLayer } = options;
-    const names = [...tileLayers, ...Object.keys(result.layers).filter((n) => !tileLayers.includes(n))];
+    const names = [
+        ...tileLayers,
+        ...Object.keys(result.layers).filter((n) => !tileLayers.includes(n)),
+    ];
     const changes: CellChange[] = [];
     for (const layer of names) {
         (result.layers[layer] ?? []).forEach((cell, i) => {
-            if (cell) changes.push({ layer, x: i % result.width, y: Math.floor(i / result.width), cell });
+            if (cell)
+                changes.push({ layer, x: i % result.width, y: Math.floor(i / result.width), cell });
         });
     }
-    let { map, sets } = applyCells(
+    const built = applyCells(
         newMap(result.width, result.height, tileSize, tileLayers),
         [],
         changes,
-        options
+        options,
     );
+    const { sets } = built;
+    let { map } = built;
     for (const object of result.objects) {
         ({ map } = addObject(
             map,
@@ -59,7 +65,7 @@ export function resultToMap(
                 height: object.h * tileSize,
                 properties: object.properties ? toProperties(object.properties) : undefined,
             },
-            options.order
+            options.order,
         ));
     }
     // Recorded so the POI can be re-rolled later. Tiled keeps custom properties.

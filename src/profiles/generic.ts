@@ -25,6 +25,7 @@ export const generic: Profile = {
     depthRole: (rowFromBottom) =>
         rowFromBottom === 0 ? [{ name: "collides", type: "bool", value: true }] : [],
     isSolid: (props, layer) => layer !== "overhead" && props.collides === true,
+    tileProblem: () => null,
     contexts: () => [],
     validate: (input) => baseIssues(input, (gid) => cellOf(gid, input.sets)),
 };

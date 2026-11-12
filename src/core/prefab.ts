@@ -55,7 +55,7 @@ export function flatten(libraries: readonly PrefabLibrary[]): LibPrefab[] {
             ...prefab,
             tileset: library.tileset,
             themes: library.themes,
-        }))
+        })),
     );
 }
 
@@ -185,7 +185,7 @@ export function detectPrefabs(raster: Raster, def: TiledTileset, options: Detect
 export function prefabFromTiles(
     def: TiledTileset,
     tiles: readonly number[],
-    layerFor: DetectOptions["layerFor"]
+    layerFor: DetectOptions["layerFor"],
 ): Prefab {
     const cols = tiles.map((id) => id % def.columns);
     const rws = tiles.map((id) => Math.floor(id / def.columns));
@@ -218,7 +218,7 @@ export function prefabFromRegion(
     mapWidth: number,
     rect: { x: number; y: number; w: number; h: number },
     tileset: string,
-    id: string
+    id: string,
 ): Prefab | null {
     const found: { x: number; y: number; layer: string; cell: Cell }[] = [];
     for (const [layer, grid] of Object.entries(grids)) {
@@ -267,7 +267,7 @@ export function findInstances(
     grids: Record<string, Grid>,
     width: number,
     height: number,
-    prefabs: readonly LibPrefab[]
+    prefabs: readonly LibPrefab[],
 ): Instance[] {
     const out: Instance[] = [];
     for (const prefab of prefabs) {
@@ -300,12 +300,12 @@ export function instanceAt(
     instances: readonly Instance[],
     x: number,
     y: number,
-    layer?: string
+    layer?: string,
 ): Instance | undefined {
     return instances.find(({ prefab, x: px, y: py }) =>
         prefab.cells.some(
-            (cell) => px + cell.dx === x && py + cell.dy === y && (!layer || cell.layer === layer)
-        )
+            (cell) => px + cell.dx === x && py + cell.dy === y && (!layer || cell.layer === layer),
+        ),
     );
 }
 
@@ -318,7 +318,7 @@ export function swapCandidates(target: LibPrefab, prefabs: readonly LibPrefab[])
             (other) =>
                 !(other.id === target.id && other.tileset === target.tileset) &&
                 other.kind === target.kind &&
-                shares(other)
+                shares(other),
         )
         .sort((a, b) => Number(same(b)) - Number(same(a)));
 }
@@ -354,4 +354,26 @@ export function uniqueId(library: PrefabLibrary, base: string): string {
     const taken = new Set(library.prefabs.map((p) => p.id));
     if (!taken.has(base)) return base;
     for (let n = 2; ; n++) if (!taken.has(`${base}-${n}`)) return `${base}-${n}`;
+}
+
+/**
+ * Splits prefabs into those a map can use and those it can't: a sheet the
+ * project lacks, or a tile the profile says doesn't belong on its layer.
+ */
+export function usablePrefabs(
+    prefabs: readonly LibPrefab[],
+    problem: (tileset: string, tile: number, layer: string) => string | null,
+): { usable: LibPrefab[]; rejected: { prefab: LibPrefab; reason: string }[] } {
+    const usable: LibPrefab[] = [];
+    const rejected: { prefab: LibPrefab; reason: string }[] = [];
+    for (const prefab of prefabs) {
+        let reason: string | null = null;
+        for (const cell of prefab.cells) {
+            reason = problem(cell.tileset ?? prefab.tileset, cell.tile, cell.layer);
+            if (reason) break;
+        }
+        if (reason) rejected.push({ prefab, reason });
+        else usable.push(prefab);
+    }
+    return { usable, rejected };
 }

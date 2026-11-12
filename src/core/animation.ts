@@ -96,7 +96,7 @@ export function animateAppended(
     cells: readonly { col: number; row: number }[],
     w: number,
     h: number,
-    duration: number
+    duration: number,
 ): TiledTileset {
     let next = def;
     const [first] = cells;

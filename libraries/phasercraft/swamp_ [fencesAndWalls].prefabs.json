@@ -1,0 +1,280 @@
+{
+    "version": 1,
+    "tileset": "swamp_ [fencesAndWalls]",
+    "themes": [
+        "swamp"
+    ],
+    "prefabs": [
+        {
+            "id": "fence",
+            "name": "Wooden fence",
+            "tags": [
+                "fence"
+            ],
+            "kind": "stretch",
+            "w": 3,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 61
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 62
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 63
+                }
+            ],
+            "stretch": {
+                "left": 1,
+                "right": 1
+            }
+        },
+        {
+            "id": "wall",
+            "name": "Stone wall",
+            "tags": [
+                "wall"
+            ],
+            "kind": "fixed",
+            "w": 3,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 77
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 78
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 79
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 92
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 93
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 94
+                }
+            ]
+        },
+        {
+            "id": "pillar",
+            "name": "Stone pillar",
+            "tags": [
+                "pillar"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 76
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 91
+                }
+            ]
+        },
+        {
+            "id": "block-107",
+            "name": "Stone block 107",
+            "tags": [
+                "pillar",
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 107
+                }
+            ]
+        },
+        {
+            "id": "block-122",
+            "name": "Stone block 122",
+            "tags": [
+                "pillar",
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 122
+                }
+            ]
+        },
+        {
+            "id": "block-124",
+            "name": "Stone block 124",
+            "tags": [
+                "pillar",
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 124
+                }
+            ]
+        },
+        {
+            "id": "lantern",
+            "name": "Lantern",
+            "tags": [
+                "light"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 108
+                }
+            ]
+        },
+        {
+            "id": "ruined-arch",
+            "name": "Ruined arch",
+            "tags": [
+                "wall"
+            ],
+            "kind": "fixed",
+            "w": 3,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 128
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 129
+                },
+                {
+                    "dx": 2,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 130
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 143
+                },
+                {
+                    "dx": 2,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 145
+                }
+            ]
+        },
+        {
+            "id": "pillar-left",
+            "name": "Broken pillar (left)",
+            "tags": [
+                "pillar"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 131
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 146
+                }
+            ]
+        },
+        {
+            "id": "pillar-right",
+            "name": "Broken pillar (right)",
+            "tags": [
+                "pillar"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 133
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 148
+                }
+            ]
+        }
+    ]
+}

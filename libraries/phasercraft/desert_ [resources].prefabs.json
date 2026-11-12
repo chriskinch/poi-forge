@@ -1,0 +1,530 @@
+{
+    "version": 1,
+    "tileset": "desert_ [resources]",
+    "themes": [
+        "desert"
+    ],
+    "prefabs": [
+        {
+            "id": "tree-a",
+            "name": "Tree A",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 13
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 25
+                }
+            ]
+        },
+        {
+            "id": "tree-b",
+            "name": "Tree B",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 14
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 26
+                }
+            ]
+        },
+        {
+            "id": "tree-c",
+            "name": "Tree C",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 15
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 27
+                }
+            ]
+        },
+        {
+            "id": "tree-e",
+            "name": "Tree E",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 30
+                }
+            ]
+        },
+        {
+            "id": "rock-big",
+            "name": "Big rock",
+            "tags": [
+                "rock"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 38
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 39
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 50
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 51
+                }
+            ]
+        },
+        {
+            "id": "rock",
+            "name": "Rock",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 40
+                }
+            ]
+        },
+        {
+            "id": "rocks",
+            "name": "Rocks",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 52
+                }
+            ]
+        },
+        {
+            "id": "ore-41",
+            "name": "Ore rock 41",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 41
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-42",
+            "name": "Ore rock 42",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 42
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-53",
+            "name": "Ore rock 53",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 53
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-54",
+            "name": "Ore rock 54",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 54
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "flower-79",
+            "name": "Flower 79",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 79
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "chest",
+            "name": "Chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 61
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 73
+                }
+            ]
+        },
+        {
+            "id": "chest-open",
+            "name": "Open chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 62
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 74
+                }
+            ]
+        },
+        {
+            "id": "chest-big",
+            "name": "Big chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 63
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 64
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 75
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 76
+                }
+            ]
+        },
+        {
+            "id": "chest-big-open",
+            "name": "Big open chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 65
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 66
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 77
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 78
+                }
+            ]
+        },
+        {
+            "id": "sign",
+            "name": "Sign",
+            "tags": [
+                "sign"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 85
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 97
+                }
+            ]
+        },
+        {
+            "id": "grave-a",
+            "name": "Gravestone A",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 86
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 98
+                }
+            ]
+        },
+        {
+            "id": "grave-b",
+            "name": "Gravestone B",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 87
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 99
+                }
+            ]
+        },
+        {
+            "id": "grave-c",
+            "name": "Gravestone C",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 88
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 100
+                }
+            ]
+        },
+        {
+            "id": "campfire-unlit",
+            "name": "Unlit campfire",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 102
+                }
+            ]
+        },
+        {
+            "id": "campfire",
+            "name": "Campfire",
+            "tags": [
+                "fire",
+                "light"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 91
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 103
+                }
+            ]
+        }
+    ]
+}

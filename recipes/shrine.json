@@ -4,11 +4,36 @@
     "description": "A centrepiece (statue, fountain, altar) ringed by lights, with a clear approach from the south.",
     "size": { "w": [7, 16, 9], "h": [7, 16, 9] },
     "steps": [
-        { "type": "fill", "tags": ["soil"], "decoTags": ["soil-deco"], "decoChance": 0.1, "optional": true },
-        { "type": "focal", "any": ["shrine", "fountain", "statue"], "anchor": "center", "zone": { "name": "shrine" } },
+        {
+            "type": "fill",
+            "tags": ["soil"],
+            "decoTags": ["soil-deco"],
+            "decoChance": 0.1,
+            "optional": true
+        },
+        {
+            "type": "focal",
+            "any": ["shrine", "fountain", "statue"],
+            "anchor": "center",
+            "zone": { "name": "shrine" }
+        },
         { "type": "ring", "tags": ["light"], "count": [2, 4], "radius": [2, 3], "optional": true },
-        { "type": "outline", "any": ["pillar", "wall"], "inset": [0, 1], "fill": 0.25, "optional": true, "chance": 0.7 },
-        { "type": "scatter", "any": ["plant", "rock-small"], "per100": [4, 8], "zone": "edges", "cluster": 0.5, "optional": true },
+        {
+            "type": "outline",
+            "any": ["pillar", "wall"],
+            "inset": [0, 1],
+            "fill": 0.25,
+            "optional": true,
+            "chance": 0.7
+        },
+        {
+            "type": "scatter",
+            "any": ["plant", "rock-small"],
+            "per100": [4, 8],
+            "zone": "edges",
+            "cluster": 0.5,
+            "optional": true
+        },
         { "type": "decal", "tags": ["ground-deco"], "chance": 0.06, "optional": true }
     ]
 }

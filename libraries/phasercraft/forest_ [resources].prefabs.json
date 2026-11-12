@@ -1,0 +1,1060 @@
+{
+    "version": 1,
+    "tileset": "forest_ [resources]",
+    "themes": [
+        "forest"
+    ],
+    "prefabs": [
+        {
+            "id": "tree-a",
+            "name": "Tree A",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 13
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 25
+                }
+            ]
+        },
+        {
+            "id": "tree-b",
+            "name": "Tree B",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 14
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 26
+                }
+            ]
+        },
+        {
+            "id": "tree-c",
+            "name": "Tree C",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 15
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 27
+                }
+            ]
+        },
+        {
+            "id": "tree-d",
+            "name": "Tree D",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 16
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 17
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 28
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 29
+                }
+            ]
+        },
+        {
+            "id": "tree-e",
+            "name": "Tree E",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 18
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 30
+                }
+            ]
+        },
+        {
+            "id": "sprout-19",
+            "name": "Small plant 19",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 19
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "sprout-20",
+            "name": "Small plant 20",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 20
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "sprout-21",
+            "name": "Small plant 21",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 21
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "sprout-22",
+            "name": "Small plant 22",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 22
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "sprout-31",
+            "name": "Small plant 31",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 31
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "sprout-32",
+            "name": "Small plant 32",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 32
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "sprout-33",
+            "name": "Small plant 33",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 33
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "sprout-34",
+            "name": "Small plant 34",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 34
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "bush",
+            "name": "Bush",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 37
+                }
+            ]
+        },
+        {
+            "id": "bushes",
+            "name": "Bushes",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 49
+                }
+            ]
+        },
+        {
+            "id": "rock-big",
+            "name": "Big rock",
+            "tags": [
+                "rock"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 38
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 39
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 50
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 51
+                }
+            ]
+        },
+        {
+            "id": "rock",
+            "name": "Rock",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 40
+                }
+            ]
+        },
+        {
+            "id": "rocks",
+            "name": "Rocks",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 52
+                }
+            ]
+        },
+        {
+            "id": "ore-41",
+            "name": "Ore rock 41",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 41
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-42",
+            "name": "Ore rock 42",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 42
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-53",
+            "name": "Ore rock 53",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 53
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-54",
+            "name": "Ore rock 54",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 54
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "flower-43",
+            "name": "Flower 43",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 43
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-44",
+            "name": "Flower 44",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 44
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-45",
+            "name": "Flower 45",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 45
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-46",
+            "name": "Flower 46",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 46
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-55",
+            "name": "Flower 55",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 55
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-56",
+            "name": "Flower 56",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 56
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-57",
+            "name": "Flower 57",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 57
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-58",
+            "name": "Flower 58",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 58
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-67",
+            "name": "Flower 67",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 67
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-68",
+            "name": "Flower 68",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 68
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-69",
+            "name": "Flower 69",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 69
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-70",
+            "name": "Flower 70",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 70
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-79",
+            "name": "Flower 79",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 79
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-80",
+            "name": "Flower 80",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 80
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-81",
+            "name": "Flower 81",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 81
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "flower-82",
+            "name": "Flower 82",
+            "tags": [
+                "plant",
+                "flower"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 82
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "chest",
+            "name": "Chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 61
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 73
+                }
+            ]
+        },
+        {
+            "id": "chest-open",
+            "name": "Open chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 62
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 74
+                }
+            ]
+        },
+        {
+            "id": "chest-big",
+            "name": "Big chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 63
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 64
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 75
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 76
+                }
+            ]
+        },
+        {
+            "id": "chest-big-open",
+            "name": "Big open chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 65
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 66
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 77
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 78
+                }
+            ]
+        },
+        {
+            "id": "sign",
+            "name": "Sign",
+            "tags": [
+                "sign"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 85
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 97
+                }
+            ]
+        },
+        {
+            "id": "grave-a",
+            "name": "Gravestone A",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 86
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 98
+                }
+            ]
+        },
+        {
+            "id": "grave-b",
+            "name": "Gravestone B",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 87
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 99
+                }
+            ]
+        },
+        {
+            "id": "grave-c",
+            "name": "Gravestone C",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 88
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 100
+                }
+            ]
+        },
+        {
+            "id": "campfire-unlit",
+            "name": "Unlit campfire",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 102
+                }
+            ]
+        },
+        {
+            "id": "campfire",
+            "name": "Campfire",
+            "tags": [
+                "fire",
+                "light"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 91
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 103
+                }
+            ]
+        }
+    ]
+}

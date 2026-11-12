@@ -4,11 +4,42 @@
     "description": "A fire in the middle with tents, seats and clutter gathered round it.",
     "size": { "w": [8, 18, 10], "h": [8, 16, 9] },
     "steps": [
-        { "type": "fill", "tags": ["soil"], "decoTags": ["soil-deco"], "decoChance": 0.1, "optional": true },
-        { "type": "focal", "any": ["fire", "light"], "anchor": "center", "zone": { "name": "camp" } },
-        { "type": "ring", "any": ["tent", "seat"], "count": [2, 4], "radius": [2, 3], "optional": true },
-        { "type": "scatter", "any": ["clutter", "sign"], "per100": [3, 6], "zone": "field", "cluster": 0.7, "optional": true },
-        { "type": "scatter", "any": ["rock", "plant", "tree"], "per100": [3, 6], "zone": "edges", "cluster": 0.4, "optional": true },
+        {
+            "type": "fill",
+            "tags": ["soil"],
+            "decoTags": ["soil-deco"],
+            "decoChance": 0.1,
+            "optional": true
+        },
+        {
+            "type": "focal",
+            "any": ["fire", "light"],
+            "anchor": "center",
+            "zone": { "name": "camp" }
+        },
+        {
+            "type": "ring",
+            "any": ["tent", "seat"],
+            "count": [2, 4],
+            "radius": [2, 3],
+            "optional": true
+        },
+        {
+            "type": "scatter",
+            "any": ["clutter", "sign"],
+            "per100": [3, 6],
+            "zone": "field",
+            "cluster": 0.7,
+            "optional": true
+        },
+        {
+            "type": "scatter",
+            "any": ["rock", "plant", "tree"],
+            "per100": [3, 6],
+            "zone": "edges",
+            "cluster": 0.4,
+            "optional": true
+        },
         { "type": "decal", "any": ["bones", "ground-deco"], "chance": 0.04, "optional": true }
     ]
 }

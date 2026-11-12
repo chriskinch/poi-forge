@@ -145,7 +145,7 @@ function eligible(state: State, step: StepBase, kind?: (prefab: LibPrefab) => bo
             (!themes.length ||
                 !prefab.themes.length ||
                 prefab.themes.some((theme) => themes.includes(theme))) &&
-            (!kind || kind(prefab))
+            (!kind || kind(prefab)),
     );
 }
 
@@ -174,7 +174,7 @@ function put(
     x: number,
     y: number,
     width = prefab.w,
-    claim = true
+    claim = true,
 ) {
     for (const placed of expand(prefab, width)) {
         const cx = x + placed.dx;
@@ -252,7 +252,7 @@ function fill(state: State, step: Extract<Step, { type: "fill" }>) {
             const prefab = deco.length && state.random() < chance ? choose(state, deco) : ground;
             for (const placed of expand(prefab)) {
                 const grid = (state.layers[placed.layer] ??= new Array(state.w * state.h).fill(
-                    null
+                    null,
                 ));
                 grid[y * state.w + x] = placed.cell;
             }
@@ -272,7 +272,7 @@ function backdrop(state: State, step: Extract<Step, { type: "backdrop" }>) {
     const options = eligible(
         state,
         step,
-        (p) => p.kind === "stretch" && minWidth(p) <= state.w && p.h < state.h - 2
+        (p) => p.kind === "stretch" && minWidth(p) <= state.w && p.h < state.h - 2,
     );
     if (!options.length) return skip(state, step, describe(step));
     const prefab = choose(state, options);
@@ -286,7 +286,7 @@ function focal(state: State, step: Extract<Step, { type: "focal" }>) {
     const options = eligible(
         state,
         step,
-        (p) => p.kind !== "stretch" && p.w <= state.w - 2 && p.h <= state.h - 2
+        (p) => p.kind !== "stretch" && p.w <= state.w - 2 && p.h <= state.h - 2,
     );
     if (!options.length) return skip(state, step, describe(step));
     const prefab = choose(state, options);
@@ -360,10 +360,7 @@ function flank(state: State, step: Extract<Step, { type: "flank" }>) {
             const rightX = lane.x1 + 1 + gap;
             const ly = by - prefab.h + 1;
             const ry = by - other.h + 1;
-            if (
-                fits(state, expand(prefab), leftX, ly) &&
-                fits(state, expand(other), rightX, ry)
-            ) {
+            if (fits(state, expand(prefab), leftX, ly) && fits(state, expand(other), rightX, ry)) {
                 put(state, "flank", prefab, leftX, ly);
                 put(state, "flank", other, rightX, ry);
                 break;
@@ -387,7 +384,8 @@ function ring(state: State, step: Extract<Step, { type: "ring" }>) {
     const same = state.params.symmetry ? choose(state, options) : undefined;
     for (let i = 0; i < count; i++) {
         const t = count === 1 ? 0.5 : i / (count - 1);
-        const angle = start + sweep * t + (state.params.symmetry ? 0 : (state.random() - 0.5) * 0.4);
+        const angle =
+            start + sweep * t + (state.params.symmetry ? 0 : (state.random() - 0.5) * 0.4);
         const prefab = same ?? choose(state, options);
         const px = centre.x + Math.cos(angle) * radius;
         const py = centre.y + Math.sin(angle) * radius * 0.8;
@@ -486,7 +484,7 @@ export function walkable(
     layers: Record<string, Grid>,
     w: number,
     h: number,
-    solid: GenContext["solid"]
+    solid: GenContext["solid"],
 ): Uint8Array {
     const blocked = new Uint8Array(w * h);
     for (const [layer, grid] of Object.entries(layers)) {
@@ -623,7 +621,7 @@ export function generateValid(
     recipe: Recipe,
     params: GenParams,
     ctx: GenContext,
-    attempts = 12
+    attempts = 12,
 ): GenResult {
     let result = generate(recipe, params, ctx);
     for (let n = 1; n < attempts && result.problems.length; n++) {

@@ -1,0 +1,690 @@
+{
+    "version": 1,
+    "tileset": "caveObjects_",
+    "themes": [
+        "cave"
+    ],
+    "prefabs": [
+        {
+            "id": "mushroom-brown-tall",
+            "name": "Tall brown mushroom",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 12
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 23
+                }
+            ]
+        },
+        {
+            "id": "mushroom-orange-tall",
+            "name": "Tall orange mushroom",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 13
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 24
+                }
+            ]
+        },
+        {
+            "id": "mushroom-17",
+            "name": "Mushroom 17",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 17
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-18",
+            "name": "Mushroom 18",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 18
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-19",
+            "name": "Mushroom 19",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 19
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-20",
+            "name": "Mushroom 20",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 20
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-28",
+            "name": "Mushroom 28",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 28
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-29",
+            "name": "Mushroom 29",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 29
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-30",
+            "name": "Mushroom 30",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 30
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-31",
+            "name": "Mushroom 31",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 31
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-41",
+            "name": "Mushroom 41",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 41
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-42",
+            "name": "Mushroom 42",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 42
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-52",
+            "name": "Mushroom 52",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 52
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "mushroom-53",
+            "name": "Mushroom 53",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 53
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "rock-big",
+            "name": "Big rock",
+            "tags": [
+                "rock"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 35
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 36
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 46
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 47
+                }
+            ]
+        },
+        {
+            "id": "rock-48",
+            "name": "Rock 48",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 48
+                }
+            ]
+        },
+        {
+            "id": "rock-49",
+            "name": "Rock 49",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 49
+                }
+            ]
+        },
+        {
+            "id": "ore-39",
+            "name": "Ore rock 39",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 39
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-40",
+            "name": "Ore rock 40",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 40
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-50",
+            "name": "Ore rock 50",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 50
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "ore-51",
+            "name": "Ore rock 51",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 51
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "grave-a",
+            "name": "Gravestone A",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 56
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 67
+                }
+            ]
+        },
+        {
+            "id": "grave-b",
+            "name": "Gravestone B",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 57
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 68
+                }
+            ]
+        },
+        {
+            "id": "grave-c",
+            "name": "Gravestone C",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 58
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 69
+                }
+            ]
+        },
+        {
+            "id": "chest",
+            "name": "Chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 59
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 70
+                }
+            ]
+        },
+        {
+            "id": "chest-open",
+            "name": "Open chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 60
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 71
+                }
+            ]
+        },
+        {
+            "id": "chest-big",
+            "name": "Big chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 79
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 80
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 90
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 91
+                }
+            ]
+        },
+        {
+            "id": "chest-big-open",
+            "name": "Big open chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 81
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 82
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 92
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 93
+                }
+            ]
+        },
+        {
+            "id": "sign",
+            "name": "Sign",
+            "tags": [
+                "sign"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure props",
+                    "tile": 78
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structure",
+                    "tile": 89
+                }
+            ]
+        },
+        {
+            "id": "campfire-unlit",
+            "name": "Unlit campfire",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 111
+                }
+            ]
+        },
+        {
+            "id": "campfire",
+            "name": "Campfire",
+            "tags": [
+                "fire",
+                "light"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 112
+                }
+            ]
+        }
+    ]
+}

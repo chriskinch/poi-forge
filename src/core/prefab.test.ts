@@ -61,7 +61,10 @@ describe("detection", () => {
     it("leaves oversized groups to manual selection", () => {
         const big = blankRaster(96, 96);
         paintRect(big, 0, 0, 96, 96);
-        expect(detectPrefabs(big, def, { layerFor, maxTiles: 20 })).toEqual({ prefabs: [], skipped: 1 });
+        expect(detectPrefabs(big, def, { layerFor, maxTiles: 20 })).toEqual({
+            prefabs: [],
+            skipped: 1,
+        });
     });
 });
 
@@ -106,13 +109,22 @@ describe("instances", () => {
     });
 
     it("offers same-tag prefabs and swaps on the same base", () => {
-        const tall: LibPrefab = { ...rock, id: "tall-rock", h: 3, w: 1, cells: [
-            { dx: 0, dy: 0, layer: "structure props", tile: 80 },
-            { dx: 0, dy: 1, layer: "structure props", tile: 81 },
-            { dx: 0, dy: 2, layer: "structure", tile: 82 },
-        ] };
+        const tall: LibPrefab = {
+            ...rock,
+            id: "tall-rock",
+            h: 3,
+            w: 1,
+            cells: [
+                { dx: 0, dy: 0, layer: "structure props", tile: 80 },
+                { dx: 0, dy: 1, layer: "structure props", tile: 81 },
+                { dx: 0, dy: 2, layer: "structure", tile: 82 },
+            ],
+        };
         const twin: LibPrefab = { ...rock, id: "twin" };
-        expect(swapCandidates(rock, [...library, tall, twin]).map((p) => p.id)).toEqual(["twin", "tall-rock"]);
+        expect(swapCandidates(rock, [...library, tall, twin]).map((p) => p.id)).toEqual([
+            "twin",
+            "tall-rock",
+        ]);
         const [instance] = findInstances(grids, width, height, library);
         const changes = swapChanges(instance!, tall);
         expect(changes.filter((c) => !c.cell)).toHaveLength(4);

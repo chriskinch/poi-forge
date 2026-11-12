@@ -4,7 +4,13 @@
     "description": "A doorway set into a ridge: cave mouth, mine, crypt. Lights flank a clear lane to the south.",
     "size": { "w": [8, 20, 10], "h": [8, 16, 10] },
     "steps": [
-        { "type": "fill", "tags": ["soil"], "decoTags": ["soil-deco"], "decoChance": 0.12, "optional": true },
+        {
+            "type": "fill",
+            "tags": ["soil"],
+            "decoTags": ["soil-deco"],
+            "decoChance": 0.12,
+            "optional": true
+        },
         { "type": "backdrop", "tags": ["backdrop"] },
         {
             "type": "focal",
@@ -12,10 +18,39 @@
             "anchor": "backdrop",
             "zone": { "name": "dungeon-entrance" }
         },
-        { "type": "flank", "tags": ["apron"], "pairs": [1, 1], "gap": [0, 0], "row": [1, 1], "optional": true, "chance": 0.8 },
-        { "type": "flank", "tags": ["light"], "pairs": [1, 1], "gap": [0, 1], "row": [0, 1], "optional": true },
-        { "type": "scatter", "any": ["rock", "plant"], "per100": [3, 6], "zone": "back", "cluster": 0.5, "optional": true },
-        { "type": "scatter", "any": ["rock", "rock-small", "plant"], "per100": [3, 6], "zone": "edges", "cluster": 0.4, "optional": true },
+        {
+            "type": "flank",
+            "tags": ["apron"],
+            "pairs": [1, 1],
+            "gap": [0, 0],
+            "row": [1, 1],
+            "optional": true,
+            "chance": 0.8
+        },
+        {
+            "type": "flank",
+            "tags": ["light"],
+            "pairs": [1, 1],
+            "gap": [0, 1],
+            "row": [0, 1],
+            "optional": true
+        },
+        {
+            "type": "scatter",
+            "any": ["rock", "plant"],
+            "per100": [3, 6],
+            "zone": "back",
+            "cluster": 0.5,
+            "optional": true
+        },
+        {
+            "type": "scatter",
+            "any": ["rock", "rock-small", "plant"],
+            "per100": [3, 6],
+            "zone": "edges",
+            "cluster": 0.4,
+            "optional": true
+        },
         { "type": "decal", "tags": ["bones"], "chance": 0.04, "optional": true },
         { "type": "decal", "tags": ["ground-deco"], "chance": 0.05, "optional": true }
     ]

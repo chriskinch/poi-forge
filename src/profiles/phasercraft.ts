@@ -2,7 +2,7 @@
  * Phasercraft conventions (the game's docs/map-poi.md and docs/world-depth.md).
  * POIs are small .tmj files stamped into generated biome maps.
  */
-import { cellOf, type Catalog, type Grid } from "../core/doc";
+import { cellOf, type Catalog, type Grid, type TilesetEntry } from "../core/doc";
 import { baseIssues, type Issue, type Profile } from "../core/profile";
 import { rng } from "../core/rng";
 import { tileProps } from "../core/tileset";
@@ -38,7 +38,7 @@ const PATH_DECO_CHANCE = 0.22;
 const GROUND = 46;
 const POI_MARGIN = 2;
 const POI_PAD_RADIUS = 2;
-const CONTEXT_MARGIN = 7;
+const CONTEXT_MARGIN = 5;
 
 const BACKGROUNDS: Record<string, string> = {
     forest: "#4a7c3f",
@@ -58,11 +58,7 @@ function biomes(catalog: Catalog): string[] {
  * trail: a rounded clearing two tiles wider than the POI, edged with the path
  * autotile.
  */
-function context(
-    map: { width: number; height: number },
-    variant: string,
-    catalog: Catalog
-) {
+function context(map: { width: number; height: number }, variant: string, catalog: Catalog) {
     const ground = `${variant}_`;
     const path = `${variant}Path_`;
     if (!catalog[ground] || !catalog[path]) return null;
@@ -151,6 +147,19 @@ function context(
     };
 }
 
+/**
+ * Prop layers depth-sort against characters, so every tile on one needs a
+ * role: solid, anchored to a base row, or flat ground.
+ */
+function tileProblem(entry: TilesetEntry, tile: number, layer: string): string | null {
+    if (!PROP_LAYERS.includes(layer)) return null;
+    const props = tileProps(entry.def, tile);
+    if (DEPTH_ROLES.some((role) => role in props)) return null;
+    return entry.variant
+        ? `${entry.name}:${tile} has no depth role in the ${entry.variant} map: it won't collide or sort in game.`
+        : `${entry.name}:${tile} has no depth role. Give it collides, sortBase or ground.`;
+}
+
 export const phasercraft: Profile = {
     id: "phasercraft",
     label: "Phasercraft",
@@ -207,6 +216,7 @@ export const phasercraft: Profile = {
     isSolid: (props, layer) =>
         COLLISION_LAYERS.includes(layer) &&
         (props.collides === true || Number(props.solidCorners ?? 0) > 0),
+    tileProblem,
     contexts: biomes,
     context,
     themesFor: (variant) => [variant],
@@ -240,16 +250,16 @@ export const phasercraft: Profile = {
                 const at = { layer: layer.name, x: i % map.width, y: Math.floor(i / map.width) };
                 const key = `${layer.name}|${cell.tileset}|${cell.tile}`;
 
-                if (PROP_LAYERS.includes(layer.name)) {
-                    // Biome sheets get their roles from the game's generator.
-                    if (!entry.variant && !DEPTH_ROLES.some((role) => role in props)) {
-                        issues.push({
-                            level: "error",
-                            message: `${cell.tileset}:${cell.tile} has no depth role. Give it collides, sortBase or ground.`,
-                            ...at,
-                            ...cell,
-                        });
-                    }
+                const problem = tileProblem(entry, cell.tile, layer.name);
+                if (problem) {
+                    // Biome sheets get their roles from the game's generator,
+                    // so the fix isn't in this map: a warning, not an error.
+                    issues.push({
+                        level: entry.variant ? "warning" : "error",
+                        message: problem,
+                        ...at,
+                        ...cell,
+                    });
                 }
                 if ("solidCorners" in props && props.ground !== true) {
                     if (!reported.has(`ground|${key}`)) {

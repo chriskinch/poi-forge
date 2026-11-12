@@ -1,7 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { generatedWith, resultToMap } from "./build";
 import { readMapTilesets, mapCells, type Catalog } from "./doc";
-import { clampSize, generate, generateValid, themesOf, walkable, type GenContext, type GenParams } from "./generator";
+import {
+    clampSize,
+    generate,
+    generateValid,
+    themesOf,
+    walkable,
+    type GenContext,
+    type GenParams,
+} from "./generator";
 import { RECIPES, recipeById } from "./recipes";
 import { sheet, testLibrary, testSolid } from "./testing";
 
@@ -10,7 +18,14 @@ const ctx: GenContext = {
     layers: ["terrain", "paths", "structure", "structure props"],
     solid: testSolid,
 };
-const params: GenParams = { width: 10, height: 10, seed: 7, themes: [], symmetry: true, density: 1 };
+const params: GenParams = {
+    width: 10,
+    height: 10,
+    seed: 7,
+    themes: [],
+    symmetry: true,
+    density: 1,
+};
 const entrance = recipeById("entrance")!;
 
 describe("generator", () => {
@@ -42,15 +57,21 @@ describe("generator", () => {
         (_id, recipe) => {
             for (let seed = 1; seed <= 40; seed++) {
                 const size = clampSize(recipe, recipe.size.w[2], recipe.size.h[2]);
-                const result = generateValid(recipe, { ...params, ...size, seed, symmetry: seed % 2 === 0 }, ctx);
+                const result = generateValid(
+                    recipe,
+                    { ...params, ...size, seed, symmetry: seed % 2 === 0 },
+                    ctx,
+                );
                 expect(result.problems, `${recipe.id} seed ${seed}`).toEqual([]);
                 expect(result.notes, `${recipe.id} seed ${seed}`).toEqual([]);
                 const reach = walkable(result.layers, result.width, result.height, ctx.solid);
                 for (const zone of result.objects) {
-                    expect(reach[zone.y * result.width + zone.x], `${recipe.id} seed ${seed}`).toBe(1);
+                    expect(reach[zone.y * result.width + zone.x], `${recipe.id} seed ${seed}`).toBe(
+                        1,
+                    );
                 }
             }
-        }
+        },
     );
 
     it("never stands a solid prop in the lane", () => {
@@ -60,7 +81,10 @@ describe("generator", () => {
             for (let y = zone!.y; y < result.height; y++) {
                 for (let x = zone!.x; x < zone!.x + zone!.w; x++) {
                     const cell = result.layers.structure![y * result.width + x];
-                    expect(!cell || !testSolid(cell, "structure"), `seed ${seed} at ${x},${y}`).toBe(true);
+                    expect(
+                        !cell || !testSolid(cell, "structure"),
+                        `seed ${seed} at ${x},${y}`,
+                    ).toBe(true);
                 }
             }
         }
@@ -75,8 +99,12 @@ describe("generator", () => {
 
     it("scales scatter with density", () => {
         const count = (density: number) =>
-            Array.from({ length: 20 }, (_, seed) =>
-                generate(entrance, { ...params, seed, density }, ctx).placements.filter((p) => p.step === "scatter").length
+            Array.from(
+                { length: 20 },
+                (_, seed) =>
+                    generate(entrance, { ...params, seed, density }, ctx).placements.filter(
+                        (p) => p.step === "scatter",
+                    ).length,
             ).reduce((a, b) => a + b, 0);
         expect(count(0)).toBe(0);
         expect(count(2)).toBeGreaterThan(count(0.5));
@@ -85,7 +113,11 @@ describe("generator", () => {
     it("keeps locked cells and places nothing on them", () => {
         const lock = { x: 0, y: 9, cells: { paths: null, structure: { tileset: "t", tile: 99 } } };
         for (let seed = 1; seed <= 10; seed++) {
-            const result = generate(entrance, { ...params, seed, density: 2 }, { ...ctx, locks: [lock] });
+            const result = generate(
+                entrance,
+                { ...params, seed, density: 2 },
+                { ...ctx, locks: [lock] },
+            );
             expect(result.layers.structure![90]).toEqual({ tileset: "t", tile: 99 });
             expect(result.layers.paths![90]).toBeNull();
         }
@@ -93,14 +125,20 @@ describe("generator", () => {
 
     it("filters prefabs by theme", () => {
         const themed = ctx.prefabs.map((p) => (p.id === "arch" ? { ...p, themes: ["cave"] } : p));
-        const result = generate(entrance, { ...params, themes: ["desert"] }, { ...ctx, prefabs: themed });
+        const result = generate(
+            entrance,
+            { ...params, themes: ["desert"] },
+            { ...ctx, prefabs: themed },
+        );
         expect(result.placements.some((p) => p.step === "focal")).toBe(false);
         expect(result.notes).toContain("focal: no prefab tagged entrance");
         expect(themesOf(themed)).toEqual(["cave"]);
     });
 
     it("reports when nothing matches at all", () => {
-        expect(generate(entrance, params, { ...ctx, prefabs: [] }).problems).toContain("No prefab matched any step");
+        expect(generate(entrance, params, { ...ctx, prefabs: [] }).problems).toContain(
+            "No prefab matched any step",
+        );
     });
 
     it("clamps size to the recipe", () => {
@@ -110,7 +148,14 @@ describe("generator", () => {
 
 describe("result to map", () => {
     const catalog: Catalog = {
-        t: { name: "t", def: sheet(10, 10, "t"), path: "tilesets/t.tsj", imagePath: "tilesets/t.png", origin: "tsj", readOnly: false },
+        t: {
+            name: "t",
+            def: sheet(10, 10, "t"),
+            path: "tilesets/t.tsj",
+            imagePath: "tilesets/t.png",
+            origin: "tsj",
+            readOnly: false,
+        },
     };
 
     it("writes a Tiled map that reads back as the same cells", () => {
@@ -127,7 +172,12 @@ describe("result to map", () => {
         expect(map.layers.map((layer) => layer.name)).toEqual([...ctx.layers, "POI"]);
         expect(readMapTilesets(map, "maps/new.tmj", catalog).sets).toEqual(sets);
         expect(mapCells(map, sets).structure).toEqual(result.layers.structure);
-        expect(map.layers.at(-1)!.objects![0]).toMatchObject({ name: "dungeon-entrance", y: 48, width: 48, height: 16 });
+        expect(map.layers.at(-1)!.objects![0]).toMatchObject({
+            name: "dungeon-entrance",
+            y: 48,
+            width: 48,
+            height: 16,
+        });
         expect(generatedWith(map)).toEqual({ recipe: "entrance", params });
         expect(Object.keys(map)).toEqual(Object.keys(map).slice().sort());
     });

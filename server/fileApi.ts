@@ -83,7 +83,7 @@ export function fileApi(): Plugin {
                 writable: [profile.roots.maps, profile.roots.tilesets],
             };
             server.config.logger.info(
-                `  POI Forge: project ${config.project} (${profile.label} profile)`
+                `  POI Forge: project ${config.project} (${profile.label} profile)`,
             );
 
             server.middlewares.use("/api", async (req, res) => {
@@ -112,7 +112,7 @@ export function fileApi(): Plugin {
                         res.statusCode = 200;
                         res.setHeader(
                             "Content-Type",
-                            TYPES[extname(full).toLowerCase()] ?? "application/octet-stream"
+                            TYPES[extname(full).toLowerCase()] ?? "application/octet-stream",
                         );
                         res.setHeader("Cache-Control", "no-store");
                         return res.end(data);

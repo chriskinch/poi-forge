@@ -40,7 +40,7 @@ const isEmpty = (tile: TiledTile): boolean => Object.keys(tile).every((key) => k
 function updateTiles(
     def: TiledTileset,
     ids: readonly number[],
-    edit: (tile: TiledTile) => TiledTile
+    edit: (tile: TiledTile) => TiledTile,
 ): TiledTileset {
     const byId = new Map((def.tiles ?? []).map((tile) => [tile.id, tile]));
     for (const id of ids) {
@@ -76,10 +76,10 @@ export function setTileProperty(
     ids: readonly number[],
     name: string,
     type: PropertyType,
-    value: unknown
+    value: unknown,
 ): TiledTileset {
     return updateTiles(def, ids, (tile) =>
-        orderTileKeys({ ...tile, properties: withProperty(tile.properties, name, type, value) })
+        orderTileKeys({ ...tile, properties: withProperty(tile.properties, name, type, value) }),
     );
 }
 
@@ -87,7 +87,7 @@ export function setTileProperty(
 export function setAnimation(
     def: TiledTileset,
     id: number,
-    frames: readonly TiledFrame[] | undefined
+    frames: readonly TiledFrame[] | undefined,
 ): TiledTileset {
     return updateTiles(def, [id], (tile) =>
         orderTileKeys({
@@ -95,7 +95,7 @@ export function setAnimation(
             animation: frames?.length
                 ? frames.map(({ duration, tileid }) => ({ duration, tileid }))
                 : undefined,
-        })
+        }),
     );
 }
 
@@ -103,7 +103,8 @@ export function setAnimation(
 export function frameOnlyTiles(def: TiledTileset): Set<number> {
     const out = new Set<number>();
     for (const tile of def.tiles ?? []) {
-        for (const frame of tile.animation ?? []) if (frame.tileid !== tile.id) out.add(frame.tileid);
+        for (const frame of tile.animation ?? [])
+            if (frame.tileid !== tile.id) out.add(frame.tileid);
     }
     return out;
 }
@@ -114,7 +115,7 @@ export function tilesetForImage(
     image: string,
     imagewidth: number,
     imageheight: number,
-    tileSize: number
+    tileSize: number,
 ): TiledTileset {
     const columns = Math.floor(imagewidth / tileSize);
     return {
@@ -137,7 +138,7 @@ export function tilesetForImage(
 /** Grows a sheet by whole rows at the bottom, so no existing tile id moves. */
 export function withImageHeight(def: TiledTileset, imageheight: number): TiledTileset {
     const rows = Math.floor(
-        (imageheight - 2 * def.margin + def.spacing) / (def.tileheight + def.spacing)
+        (imageheight - 2 * def.margin + def.spacing) / (def.tileheight + def.spacing),
     );
     return { ...def, imageheight, tilecount: rows * def.columns };
 }

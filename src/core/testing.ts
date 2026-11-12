@@ -83,7 +83,13 @@ export function sheet(columns: number, rows: number, name = "sheet"): TiledTiles
 
 /** A small hand-built library covering every tag the recipes ask for. */
 export function testLibrary(): LibPrefab[] {
-    const one = (id: string, tags: string[], layer: string, tile: number, kind: LibPrefab["kind"] = "fixed"): LibPrefab => ({
+    const one = (
+        id: string,
+        tags: string[],
+        layer: string,
+        tile: number,
+        kind: LibPrefab["kind"] = "fixed",
+    ): LibPrefab => ({
         id,
         name: id,
         tags,
@@ -103,7 +109,7 @@ export function testLibrary(): LibPrefab[] {
         h: 3,
         stretch: { left: 1, right: 1 },
         cells: [0, 1, 2].flatMap((dy) =>
-            [0, 1, 2].map((dx) => ({ dx, dy, layer: "structure", tile: 10 + dy * 3 + dx }))
+            [0, 1, 2].map((dx) => ({ dx, dy, layer: "structure", tile: 10 + dy * 3 + dx })),
         ),
         tileset: "t",
         themes: [],
@@ -116,7 +122,7 @@ export function testLibrary(): LibPrefab[] {
         w: 3,
         h: 2,
         cells: [0, 1].flatMap((dy) =>
-            [0, 1, 2].map((dx) => ({ dx, dy, layer: "structure", tile: 30 + dy * 3 + dx }))
+            [0, 1, 2].map((dx) => ({ dx, dy, layer: "structure", tile: 30 + dy * 3 + dx })),
         ),
         tileset: "t",
         themes: [],

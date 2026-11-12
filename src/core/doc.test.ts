@@ -75,7 +75,7 @@ describe("editing", () => {
                 { layer: "structure", x: 5, y: 9, cell: { tileset: "skulls_", tile: 1 } },
                 { layer: "paths", x: 0, y: 0, cell: null },
             ],
-            ctx
+            ctx,
         );
         expect(JSON.stringify(value)).toBe(before);
         const cells = mapCells(map, sets);
@@ -89,13 +89,13 @@ describe("editing", () => {
             blank,
             [],
             [{ layer: "paths", x: 0, y: 0, cell: { tileset: "forestPath_", tile: 28 } }],
-            ctx
+            ctx,
         );
         const second = applyCells(
             first.map,
             first.sets,
             [{ layer: "structure", x: 1, y: 1, cell: { tileset: "skulls_", tile: 3 } }],
-            ctx
+            ctx,
         );
         const [path, skulls] = second.map.tilesets;
         expect(isRef(path!)).toBe(false);
@@ -117,7 +117,7 @@ describe("editing", () => {
             blank,
             [],
             [{ layer: "paths", x: 0, y: 0, cell: { tileset: "forestPath_", tile: 28 } }],
-            ctx
+            ctx,
         );
         expect(map.layers.map((layer) => layer.name)).toEqual(["terrain", "paths", "structure"]);
         expect(map.nextlayerid).toBe(4);
@@ -137,7 +137,12 @@ describe("editing", () => {
         const { value } = cavePoi();
         const { sets } = readMapTilesets(value, CAVE_POI, catalog);
         expect(unusedTilesets(value, sets)).toEqual([]);
-        const emptied = { ...value, layers: value.layers.map((l) => (l.name === "structure" ? { ...l, data: l.data!.map(() => 0) } : l)) };
+        const emptied = {
+            ...value,
+            layers: value.layers.map((l) =>
+                l.name === "structure" ? { ...l, data: l.data!.map(() => 0) } : l,
+            ),
+        };
         expect(unusedTilesets(emptied, sets)).toContain("skulls_");
     });
 });
@@ -145,16 +150,28 @@ describe("editing", () => {
 describe("objects", () => {
     it("adds, finds, edits and removes objects", () => {
         const { value } = cavePoi();
-        const { map, id } = addObject(value, "spawn", { name: "boss", x: 32, y: 48, width: 0, height: 0, point: true }, ctx.order);
+        const { map, id } = addObject(
+            value,
+            "spawn",
+            { name: "boss", x: 32, y: 48, width: 0, height: 0, point: true },
+            ctx.order,
+        );
         expect(id).toBe(2);
         expect(map.nextobjectid).toBe(3);
         expect(map.layers.map((layer) => layer.name).slice(-2)).toEqual(["POI", "spawn"]);
         expect(findObject(map, id)?.object).toMatchObject({ name: "boss", point: true });
-        expect(Object.keys(findObject(map, id)!.object)).toEqual(Object.keys(findObject(map, id)!.object).slice().sort());
+        expect(Object.keys(findObject(map, id)!.object)).toEqual(
+            Object.keys(findObject(map, id)!.object).slice().sort(),
+        );
         expect(objectAt(map, 70, 85)?.object.name).toBe("dungeon-entrance");
         expect(objectAt(map, 34, 50)?.object.name).toBe("boss");
         const renamed = updateObject(map, id, (object) => ({ ...object, name: "chief" }));
         expect(findObject(renamed, id)?.object.name).toBe("chief");
-        expect(findObject(updateObject(renamed, id, () => null), id)).toBeUndefined();
+        expect(
+            findObject(
+                updateObject(renamed, id, () => null),
+                id,
+            ),
+        ).toBeUndefined();
     });
 });

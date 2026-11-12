@@ -76,7 +76,7 @@ export function readMapTilesets(map: TiledMap, mapPath: string, catalog: Catalog
     const byPath = new Map(
         Object.values(catalog)
             .filter((entry) => entry.path)
-            .map((entry) => [entry.path!, entry])
+            .map((entry) => [entry.path!, entry]),
     );
     const sets: ResolvedSet[] = [];
     const discovered: TilesetEntry[] = [];
@@ -151,7 +151,7 @@ export function tilesetForMap(
     entry: TilesetEntry,
     mapPath: string,
     firstgid: number,
-    embed: boolean
+    embed: boolean,
 ): MapTileset {
     if (!embed && entry.path) return { firstgid, source: refTo(mapPath, entry.path) };
     const { def } = entry;
@@ -176,12 +176,15 @@ export function ensureTileset(
     sets: readonly ResolvedSet[],
     entry: TilesetEntry,
     mapPath: string,
-    embed: boolean
+    embed: boolean,
 ): { map: TiledMap; sets: ResolvedSet[] } {
     if (sets.some((set) => set.name === entry.name)) return { map, sets: sets.slice() };
     const firstgid = sets.reduce((max, set) => Math.max(max, set.firstgid + set.tilecount), 1);
     return {
-        map: { ...map, tilesets: [...map.tilesets, tilesetForMap(entry, mapPath, firstgid, embed)] },
+        map: {
+            ...map,
+            tilesets: [...map.tilesets, tilesetForMap(entry, mapPath, firstgid, embed)],
+        },
         sets: [...sets, { firstgid, name: entry.name, tilecount: entry.def.tilecount }],
     };
 }
@@ -196,7 +199,7 @@ export function ensureLayer(
     map: TiledMap,
     name: string,
     type: "tilelayer" | "objectgroup",
-    order?: LayerOrder
+    order?: LayerOrder,
 ): TiledMap {
     if (map.layers.some((layer) => layer.name === name)) return map;
     const layer =
@@ -237,7 +240,7 @@ export function applyCells(
     map: TiledMap,
     sets: readonly ResolvedSet[],
     changes: readonly CellChange[],
-    ctx: EditContext
+    ctx: EditContext,
 ): { map: TiledMap; sets: ResolvedSet[] } {
     let next = map;
     let resolved = sets.slice();
@@ -251,7 +254,7 @@ export function applyCells(
             resolved,
             entry,
             ctx.mapPath,
-            ctx.embed(entry)
+            ctx.embed(entry),
         ));
     }
     const data = new Map<string, number[]>();
@@ -269,7 +272,7 @@ export function applyCells(
         map: {
             ...next,
             layers: next.layers.map((layer) =>
-                data.has(layer.name) ? { ...layer, data: data.get(layer.name)! } : layer
+                data.has(layer.name) ? { ...layer, data: data.get(layer.name)! } : layer,
             ),
         },
         sets: resolved,
@@ -323,7 +326,7 @@ export function addObject(
     map: TiledMap,
     layerName: string,
     input: ObjectInput,
-    order?: LayerOrder
+    order?: LayerOrder,
 ): { map: TiledMap; id: number } {
     const withLayer = ensureLayer(map, layerName, "objectgroup", order);
     const id = withLayer.nextobjectid;
@@ -349,7 +352,7 @@ export function addObject(
             layers: withLayer.layers.map((layer) =>
                 layer.name === layerName
                     ? { ...layer, objects: [...(layer.objects ?? []), object] }
-                    : layer
+                    : layer,
             ),
         },
     };
@@ -358,7 +361,7 @@ export function addObject(
 export function updateObject(
     map: TiledMap,
     id: number,
-    edit: (object: TiledObject) => TiledObject | null
+    edit: (object: TiledObject) => TiledObject | null,
 ): TiledMap {
     return {
         ...map,

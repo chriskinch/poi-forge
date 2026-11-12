@@ -77,10 +77,12 @@ export interface Profile {
     /** Properties a prefab piece should carry, by its row above the base. */
     depthRole: (
         rowFromBottom: number,
-        height: number
+        height: number,
     ) => { name: string; type: PropertyType; value: unknown }[];
     /** Whether a tile with these properties blocks movement on this layer. */
     isSolid: (props: Record<string, unknown>, layer: string) => boolean;
+    /** Why this tile shouldn't sit on this layer, or null when it is fine. */
+    tileProblem: (entry: TilesetEntry, tile: number, layer: string) => string | null;
     validate: (input: ValidateInput) => Issue[];
     /** Surroundings the preview can show the map in. */
     contexts: (catalog: Catalog) => string[];
@@ -90,10 +92,7 @@ export interface Profile {
 }
 
 /** Issues every profile shares: tiles that point nowhere, blank tiles painted in. */
-export function baseIssues(
-    input: ValidateInput,
-    cellAt: (gid: number) => Cell | null
-): Issue[] {
+export function baseIssues(input: ValidateInput, cellAt: (gid: number) => Cell | null): Issue[] {
     const { map, catalog, blank } = input;
     const issues: Issue[] = [];
     for (const layer of map.layers) {

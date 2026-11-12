@@ -1,0 +1,81 @@
+{
+    "version": 1,
+    "tileset": "skulls_",
+    "themes": [
+        "cave"
+    ],
+    "prefabs": [
+        {
+            "id": "skull-0",
+            "name": "Skull 0",
+            "tags": [
+                "bones"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 0
+                }
+            ]
+        },
+        {
+            "id": "skull-1",
+            "name": "Skull 1",
+            "tags": [
+                "bones"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 1
+                }
+            ]
+        },
+        {
+            "id": "skull-2",
+            "name": "Skull 2",
+            "tags": [
+                "bones"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 2
+                }
+            ]
+        },
+        {
+            "id": "skull-3",
+            "name": "Skull 3",
+            "tags": [
+                "bones"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structure",
+                    "tile": 3
+                }
+            ]
+        }
+    ]
+}

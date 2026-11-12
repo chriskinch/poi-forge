@@ -59,7 +59,12 @@ describe("tile properties", () => {
 
     it("locates tiles on the sheet, with margin and spacing", () => {
         expect(tileRect(sheet(4, 4), 6)).toEqual({ x: 32, y: 16, w: 16, h: 16 });
-        expect(tileRect({ ...sheet(4, 4), margin: 1, spacing: 2 }, 5)).toEqual({ x: 19, y: 19, w: 16, h: 16 });
+        expect(tileRect({ ...sheet(4, 4), margin: 1, spacing: 2 }, 5)).toEqual({
+            x: 19,
+            y: 19,
+            w: 16,
+            h: 16,
+        });
     });
 
     it("describes a bare image and grows it by rows", () => {
@@ -83,12 +88,16 @@ describe("animation", () => {
 
     it("fills a strip at a stride and stops at the sheet's edge", () => {
         const def = sheet(6, 2);
-        expect(stripFrames(def, { first: 1, count: 3, strideX: 2, strideY: 0, duration: 80 })).toEqual([
+        expect(
+            stripFrames(def, { first: 1, count: 3, strideX: 2, strideY: 0, duration: 80 }),
+        ).toEqual([
             { duration: 80, tileid: 1 },
             { duration: 80, tileid: 3 },
             { duration: 80, tileid: 5 },
         ]);
-        expect(stripFrames(def, { first: 4, count: 4, strideX: 1, strideY: 0, duration: 80 })).toHaveLength(2);
+        expect(
+            stripFrames(def, { first: 4, count: 4, strideX: 1, strideY: 0, duration: 80 }),
+        ).toHaveLength(2);
     });
 
     it("rebuilds the cave brazier animation exactly as committed", () => {
@@ -98,14 +107,23 @@ describe("animation", () => {
         const rebuilt = setAnimation(
             cleared,
             112,
-            stripFrames(cleared, { first: 112, count: 4, strideX: 1, strideY: 0, duration: 150 })
+            stripFrames(cleared, { first: 112, count: 4, strideX: 1, strideY: 0, duration: 150 }),
         );
         expect(getTile(rebuilt, 112)!.animation).toEqual(committed);
         expect(stringify(rebuilt, objects.format)).toBe(stringify(objects.def, objects.format));
     });
 
     it("animates a multi-tile block in sync", () => {
-        const next = animateBlock(sheet(8, 4), { col: 0, row: 1, w: 2, h: 2, count: 3, strideX: 2, strideY: 0, duration: 120 });
+        const next = animateBlock(sheet(8, 4), {
+            col: 0,
+            row: 1,
+            w: 2,
+            h: 2,
+            count: 3,
+            strideX: 2,
+            strideY: 0,
+            duration: 120,
+        });
         expect(next.tiles!.map((tile) => tile.id)).toEqual([8, 9, 16, 17]);
         expect(getTile(next, 17)!.animation).toEqual([
             { duration: 120, tileid: 17 },
@@ -116,7 +134,7 @@ describe("animation", () => {
 
     it("knows which tiles are only animation frames", () => {
         expect([...frameOnlyTiles(objects.def)].sort()).toEqual(
-            expect.arrayContaining([113, 114, 115])
+            expect.arrayContaining([113, 114, 115]),
         );
         expect(frameOnlyTiles(objects.def).has(112)).toBe(false);
     });
@@ -137,6 +155,8 @@ describe("animation", () => {
     });
 
     it("applies one duration to every frame", () => {
-        expect(uniformDuration([{ duration: 1, tileid: 4 }], 90)).toEqual([{ duration: 90, tileid: 4 }]);
+        expect(uniformDuration([{ duration: 1, tileid: 4 }], 90)).toEqual([
+            { duration: 90, tileid: 4 },
+        ]);
     });
 });

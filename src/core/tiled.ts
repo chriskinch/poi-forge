@@ -192,7 +192,7 @@ export function newMap(
     width: number,
     height: number,
     tileSize: number,
-    layerNames: readonly string[]
+    layerNames: readonly string[],
 ): TiledMap {
     return {
         compressionlevel: -1,
@@ -226,7 +226,7 @@ export function withProperty(
     props: TiledProperty[] | undefined,
     name: string,
     type: string,
-    value: unknown
+    value: unknown,
 ): TiledProperty[] | undefined {
     const rest = (props ?? []).filter((prop) => prop.name !== name);
     if (value === undefined) return rest.length ? rest : undefined;
@@ -237,10 +237,16 @@ export function withProperty(
 }
 
 /** Map-level custom property, inserted where Tiled would write it. */
-export function withMapProperty(map: TiledMap, name: string, type: string, value: unknown): TiledMap {
+export function withMapProperty(
+    map: TiledMap,
+    name: string,
+    type: string,
+    value: unknown,
+): TiledMap {
     const properties = withProperty(map.properties, name, type, value);
     const next: TiledMap = { ...map };
-    if (properties) next.properties = properties.slice().sort((a, b) => a.name.localeCompare(b.name));
+    if (properties)
+        next.properties = properties.slice().sort((a, b) => a.name.localeCompare(b.name));
     else delete next.properties;
     return sortKeys(next);
 }
@@ -256,10 +262,7 @@ export function refTo(mapPath: string, target: string): string {
     return relative(dirname(mapPath), target);
 }
 
-export function tilesetAt(
-    sets: readonly { firstgid: number }[],
-    gid: number
-): number {
+export function tilesetAt(sets: readonly { firstgid: number }[], gid: number): number {
     const id = gidId(gid);
     let found = -1;
     for (let i = 0; i < sets.length; i++) if (sets[i]!.firstgid <= id) found = i;

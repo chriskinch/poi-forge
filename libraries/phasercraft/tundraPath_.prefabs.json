@@ -1,0 +1,99 @@
+{
+    "version": 1,
+    "tileset": "tundraPath_",
+    "themes": [
+        "tundra"
+    ],
+    "prefabs": [
+        {
+            "id": "soil",
+            "name": "Soil",
+            "tags": [
+                "soil"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 28
+                }
+            ]
+        },
+        {
+            "id": "soil-deco-14",
+            "name": "Worn soil 14",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 14
+                }
+            ]
+        },
+        {
+            "id": "soil-deco-22",
+            "name": "Worn soil 22",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 22
+                }
+            ]
+        },
+        {
+            "id": "soil-deco-29",
+            "name": "Worn soil 29",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 29
+                }
+            ]
+        },
+        {
+            "id": "soil-deco-30",
+            "name": "Worn soil 30",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "paths",
+                    "tile": 30
+                }
+            ]
+        }
+    ]
+}

@@ -2,7 +2,16 @@ import { readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { CAVE_DIR, CAVE_POI, FIXTURES, readFixture } from "./testing";
-import { detectFormat, gidFlags, gidId, newMap, parse, stringify, withMapProperty, FLIP_H } from "./tiled";
+import {
+    detectFormat,
+    gidFlags,
+    gidId,
+    newMap,
+    parse,
+    stringify,
+    withMapProperty,
+    FLIP_H,
+} from "./tiled";
 
 describe("Tiled JSON", () => {
     const files = [
