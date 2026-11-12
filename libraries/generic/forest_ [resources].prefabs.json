@@ -1,0 +1,1025 @@
+{
+    "version": 1,
+    "tileset": "forest_ [resources]",
+    "themes": [
+        "forest"
+    ],
+    "prefabs": [
+        {
+            "id": "tree-olive",
+            "name": "Olive tree",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 13
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 25
+                }
+            ]
+        },
+        {
+            "id": "tree-autumn",
+            "name": "Autumn tree",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 14
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 26
+                }
+            ]
+        },
+        {
+            "id": "tree-blossom",
+            "name": "Blossom tree",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 16
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 17
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 28
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 29
+                }
+            ],
+            "weight": 0.6
+        },
+        {
+            "id": "tree-pine",
+            "name": "Pine",
+            "tags": [
+                "tree"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 18
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 30
+                }
+            ]
+        },
+        {
+            "id": "mushroom-19",
+            "name": "Mushroom 19",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 19
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "mushroom-20",
+            "name": "Mushroom 20",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 20
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "mushroom-21",
+            "name": "Mushroom 21",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 21
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "mushroom-22",
+            "name": "Mushroom 22",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 22
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "mushroom-31",
+            "name": "Mushroom 31",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 31
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "mushroom-32",
+            "name": "Mushroom 32",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 32
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "mushroom-33",
+            "name": "Mushroom 33",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 33
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "mushroom-34",
+            "name": "Mushroom 34",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 34
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "bush",
+            "name": "Bush",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 37
+                }
+            ]
+        },
+        {
+            "id": "bushes",
+            "name": "Bushes",
+            "tags": [
+                "plant"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 49
+                }
+            ]
+        },
+        {
+            "id": "rock-big",
+            "name": "Big rock",
+            "tags": [
+                "rock"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 38
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 39
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 50
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 51
+                }
+            ]
+        },
+        {
+            "id": "rock",
+            "name": "Rock",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 40
+                }
+            ]
+        },
+        {
+            "id": "rocks",
+            "name": "Rocks",
+            "tags": [
+                "rock-small"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 52
+                }
+            ]
+        },
+        {
+            "id": "ore-41",
+            "name": "Ore rock 41",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 41
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "ore-42",
+            "name": "Ore rock 42",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 42
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "ore-53",
+            "name": "Ore rock 53",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 53
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "ore-54",
+            "name": "Ore rock 54",
+            "tags": [
+                "rock-small",
+                "ore"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 54
+                }
+            ],
+            "weight": 0.4
+        },
+        {
+            "id": "flower-43",
+            "name": "Flowers 43",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 43
+                }
+            ]
+        },
+        {
+            "id": "flower-44",
+            "name": "Flowers 44",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 44
+                }
+            ]
+        },
+        {
+            "id": "flower-45",
+            "name": "Flowers 45",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 45
+                }
+            ]
+        },
+        {
+            "id": "flower-46",
+            "name": "Flowers 46",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 46
+                }
+            ]
+        },
+        {
+            "id": "flower-55",
+            "name": "Flowers 55",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 55
+                }
+            ]
+        },
+        {
+            "id": "flower-56",
+            "name": "Flowers 56",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 56
+                }
+            ]
+        },
+        {
+            "id": "flower-57",
+            "name": "Flowers 57",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 57
+                }
+            ]
+        },
+        {
+            "id": "flower-58",
+            "name": "Flowers 58",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 58
+                }
+            ]
+        },
+        {
+            "id": "flower-67",
+            "name": "Flowers 67",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 67
+                }
+            ]
+        },
+        {
+            "id": "flower-68",
+            "name": "Flowers 68",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 68
+                }
+            ]
+        },
+        {
+            "id": "flower-69",
+            "name": "Flowers 69",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 69
+                }
+            ]
+        },
+        {
+            "id": "flower-70",
+            "name": "Flowers 70",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 70
+                }
+            ]
+        },
+        {
+            "id": "flower-79",
+            "name": "Flowers 79",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 79
+                }
+            ]
+        },
+        {
+            "id": "flower-80",
+            "name": "Flowers 80",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 80
+                }
+            ]
+        },
+        {
+            "id": "flower-81",
+            "name": "Flowers 81",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 81
+                }
+            ]
+        },
+        {
+            "id": "flower-82",
+            "name": "Flowers 82",
+            "tags": [
+                "ground-deco",
+                "flower"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 82
+                }
+            ]
+        },
+        {
+            "id": "chest",
+            "name": "Chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 61
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 73
+                }
+            ]
+        },
+        {
+            "id": "chest-open",
+            "name": "Open chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 62
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 74
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "chest-big",
+            "name": "Big chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 63
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 64
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 75
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 76
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "chest-big-open",
+            "name": "Big open chest",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 65
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 66
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 77
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 78
+                }
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "sign",
+            "name": "Sign",
+            "tags": [
+                "sign"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 85
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 97
+                }
+            ]
+        },
+        {
+            "id": "grave-a",
+            "name": "Gravestone A",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 86
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 98
+                }
+            ]
+        },
+        {
+            "id": "grave-b",
+            "name": "Gravestone B",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 87
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 99
+                }
+            ]
+        },
+        {
+            "id": "grave-c",
+            "name": "Gravestone C",
+            "tags": [
+                "grave"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 88
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 100
+                }
+            ]
+        },
+        {
+            "id": "campfire-unlit",
+            "name": "Unlit campfire",
+            "tags": [
+                "clutter"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "structures",
+                    "tile": 102
+                }
+            ],
+            "weight": 0.5
+        },
+        {
+            "id": "campfire",
+            "name": "Campfire",
+            "tags": [
+                "fire"
+            ],
+            "kind": "fixed",
+            "w": 1,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "overhead",
+                    "tile": 91
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "structures",
+                    "tile": 103
+                }
+            ],
+            "weight": 4
+        }
+    ]
+}

@@ -1,115 +1,15 @@
 {
- "columns": 8,
- "image": "demo.png",
- "imageheight": 80,
- "imagewidth": 128,
+ "columns": 12,
+ "image": "forest_ [resources].png",
+ "imageheight": 160,
+ "imagewidth": 192,
  "margin": 0,
- "name": "demo",
+ "name": "forest_ [resources]",
  "spacing": 0,
- "tilecount": 40,
+ "tilecount": 120,
  "tiledversion": "1.12.2",
  "tileheight": 16,
  "tiles": [
-  {
-   "id": 6,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 7,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 8,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 9,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 10,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 11,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 12,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 16,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 17,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 18,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
   {
    "id": 19,
    "properties": [
@@ -151,7 +51,7 @@
    ]
   },
   {
-   "id": 23,
+   "id": 25,
    "properties": [
     {
      "name": "collides",
@@ -161,21 +61,7 @@
    ]
   },
   {
-   "animation": [
-    {
-     "duration": 140,
-     "tileid": 24
-    },
-    {
-     "duration": 140,
-     "tileid": 25
-    },
-    {
-     "duration": 140,
-     "tileid": 26
-    }
-   ],
-   "id": 24,
+   "id": 26,
    "properties": [
     {
      "name": "collides",
@@ -185,21 +71,17 @@
    ]
   },
   {
-   "animation": [
+   "id": 28,
+   "properties": [
     {
-     "duration": 120,
-     "tileid": 27
-    },
-    {
-     "duration": 120,
-     "tileid": 28
-    },
-    {
-     "duration": 120,
-     "tileid": 29
+     "name": "collides",
+     "type": "bool",
+     "value": true
     }
-   ],
-   "id": 27,
+   ]
+  },
+  {
+   "id": 29,
    "properties": [
     {
      "name": "collides",
@@ -259,26 +141,6 @@
    ]
   },
   {
-   "id": 35,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 36,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
    "id": 37,
    "properties": [
     {
@@ -289,7 +151,246 @@
    ]
   },
   {
-   "id": 38,
+   "id": 40,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 54,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 73,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 74,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 77,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 78,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 140,
+     "tileid": 91
+    },
+    {
+     "duration": 140,
+     "tileid": 92
+    },
+    {
+     "duration": 140,
+     "tileid": 93
+    },
+    {
+     "duration": 140,
+     "tileid": 94
+    }
+   ],
+   "id": 91
+  },
+  {
+   "id": 97,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 98,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 99,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 100,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 102,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 140,
+     "tileid": 103
+    },
+    {
+     "duration": 140,
+     "tileid": 104
+    },
+    {
+     "duration": 140,
+     "tileid": 105
+    },
+    {
+     "duration": 140,
+     "tileid": 106
+    }
+   ],
+   "id": 103,
    "properties": [
     {
      "name": "collides",

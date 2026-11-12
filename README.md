@@ -16,7 +16,7 @@ Needs Node 22+.
 
 ```sh
 npm install
-npm start            # http://localhost:5199, opens the bundled demo project
+npm start            # http://localhost:5199, opens the bundled forest example
 ```
 
 To work on a real project, point the tool at its folder and pick a profile:
@@ -39,6 +39,17 @@ them.
 The tool reads the project folder and writes only map files (`.tmj`), tileset files
 (`.tsj`) and sheet images (`.png`), only inside the folders the profile names, and only
 when you save or import. It never deletes anything.
+
+## The example project
+
+`demo/` is a small project built on the forest pack of the `fantasy_` series
+(analogStudios): terrain with a plateau and cave mouth, paths, resources, fences and
+walls, an animated fountain. `npm run demo:build` derives everything else from the
+sheets: collision and animations in each `.tsj`, the prefab libraries in
+`libraries/generic/`, and one generated map per recipe.
+
+The sheets are licensed art, included here as the example. Keep this repository and its
+deployment private, or swap the sheets out, before sharing either.
 
 ## The three tabs
 
@@ -95,15 +106,18 @@ are left out and listed under the Generate button.
 
 ## Tags the recipes use
 
-| Recipe   | Looks for                                                                            |
-| -------- | ------------------------------------------------------------------------------------ |
-| Entrance | `soil`, `soil-deco`, `backdrop` (stretch), `entrance`, `apron`, `light`, `rock`,     |
-|          | `rock-small`, `plant`, `bones`, `ground-deco`                                        |
-| Shrine   | `shrine` / `fountain` / `statue`, `light`, `pillar` / `wall`, `plant`, `rock-small`  |
-| Camp     | `fire` / `light`, `tent` / `seat`, `clutter` / `sign`, `rock`, `plant`, `tree`       |
-| Ruin     | `wall` / `pillar` / `fence` / `grave`, `statue` / `shrine` / `fountain` / `clutter`, |
-|          | `rock`, `rock-small`, `plant`, `bones`                                               |
-| Grove    | `tree`, `shrine` / `statue` / `rock` / `fountain`, `plant`, `rock-small`             |
+| Recipe   | Looks for                                                                                                 |
+| -------- | --------------------------------------------------------------------------------------------------------- |
+| Entrance | `soil` / `grass`, `soil-deco` / `grass-deco`, `backdrop` (stretch), `entrance`, `apron`, `light`, `rock`, |
+|          | `rock-small`, `plant`, `bones`, `ground-deco`                                                             |
+| Shrine   | `shrine` / `fountain` / `statue`, `light`, `pillar` / `wall`, `plant`, `rock-small`                       |
+| Camp     | `fire` / `light`, `tent` / `seat`, `clutter` / `sign`, `rock`, `plant`, `tree`                            |
+| Ruin     | `wall` / `pillar` / `fence` / `grave`, `statue` / `shrine` / `fountain` / `clutter`,                      |
+|          | `rock`, `rock-small`, `plant`, `bones`                                                                    |
+| Grove    | `tree`, `shrine` / `statue` / `rock` / `fountain`, `plant`, `rock-small`                                  |
+
+Every recipe first fills the ground with one `soil` or `grass` tile (grove: `grass`), varied
+with that ground's own `-deco` tiles.
 
 Recipes are JSON in `recipes/`; they name tags, never tile ids, so they work with any
 tileset. Step types are documented in `src/core/generator.ts`.
@@ -136,7 +150,7 @@ sheet in `biomes.ts` and `LoadScene`, run `npm run maps:biomes`.
 npm run check        # typecheck, lint, format, unit tests, build
 npm test             # unit tests (Vitest)
 npm run e2e          # browser smoke test on a copy of the demo (needs Playwright)
-npm run demo:build   # regenerate demo/ and its library
+npm run demo:build   # regenerate the example's .tsj files, libraries and maps
 ```
 
 ```
@@ -146,7 +160,7 @@ src/ui/        React app (Canvas 2D), state in one zustand store
 server/        Vite plugin: the file API
 recipes/       generator recipes
 libraries/     prefab libraries per profile
-demo/          generated demo project (generic profile)
+demo/          example project: forest sheets + generated .tsj and maps (generic profile)
 fixtures/      map and tileset JSON from Phasercraft, for tests (no art)
 ```
 

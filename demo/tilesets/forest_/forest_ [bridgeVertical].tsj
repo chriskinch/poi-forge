@@ -1,0 +1,15 @@
+{
+ "columns": 5,
+ "image": "forest_ [bridgeVertical].png",
+ "imageheight": 160,
+ "imagewidth": 80,
+ "margin": 0,
+ "name": "forest_ [bridgeVertical]",
+ "spacing": 0,
+ "tilecount": 50,
+ "tiledversion": "1.12.2",
+ "tileheight": 16,
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10"
+}

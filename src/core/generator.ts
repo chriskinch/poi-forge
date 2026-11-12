@@ -23,8 +23,12 @@ interface StepBase {
 export type Zone = "field" | "edges" | "back" | "front" | "corners";
 
 export type Step =
-    /** Covers the whole map with a 1×1 ground prefab, with occasional variants. */
-    | (StepBase & { type: "fill"; decoTags?: string[]; decoChance?: number })
+    /**
+     * Covers the whole map with one 1×1 ground prefab. Variants are the
+     * prefabs tagged `<tag>-deco` for the ground's own tag, so grass gets
+     * `grass-deco` and soil gets `soil-deco`.
+     */
+    | (StepBase & { type: "fill"; decoChance?: number })
     /** A `stretch` prefab across the full width at the top. */
     | (StepBase & { type: "backdrop" })
     /**
@@ -242,10 +246,12 @@ const describe = (step: StepBase): string =>
 function fill(state: State, step: Extract<Step, { type: "fill" }>) {
     const base = eligible(state, step, (p) => p.w === 1 && p.h === 1);
     if (!base.length) return skip(state, step, describe(step));
-    const deco = step.decoTags
-        ? eligible(state, { tags: step.decoTags }, (p) => p.w === 1 && p.h === 1)
-        : [];
     const ground = choose(state, base);
+    const wanted = [...(step.tags ?? []), ...(step.any ?? [])];
+    const decoTags = ground.tags.filter((tag) => wanted.includes(tag)).map((tag) => `${tag}-deco`);
+    const deco = decoTags.length
+        ? eligible(state, { any: decoTags }, (p) => p.w === 1 && p.h === 1)
+        : [];
     const chance = (step.decoChance ?? 0) * state.params.density;
     for (let y = 0; y < state.h; y++) {
         for (let x = 0; x < state.w; x++) {

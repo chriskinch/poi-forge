@@ -2,13 +2,24 @@
     "id": "grove",
     "name": "Grove",
     "description": "A ring of trees around a small clearing, with undergrowth at the edges.",
-    "size": { "w": [8, 20, 11], "h": [8, 18, 11] },
+    "size": {
+        "w": [8, 20, 11],
+        "h": [8, 18, 11]
+    },
     "steps": [
+        {
+            "type": "fill",
+            "any": ["grass"],
+            "decoChance": 0.12,
+            "optional": true
+        },
         {
             "type": "focal",
             "any": ["shrine", "statue", "rock", "fountain"],
             "anchor": "center",
-            "zone": { "name": "grove" },
+            "zone": {
+                "name": "grove"
+            },
             "optional": true
         },
         {
@@ -18,7 +29,13 @@
             "zone": "edges",
             "cluster": 0.3
         },
-        { "type": "ring", "tags": ["tree"], "count": [3, 5], "radius": [3, 4], "optional": true },
+        {
+            "type": "ring",
+            "tags": ["tree"],
+            "count": [3, 5],
+            "radius": [3, 4],
+            "optional": true
+        },
         {
             "type": "scatter",
             "any": ["plant", "rock-small"],
@@ -27,6 +44,11 @@
             "cluster": 0.6,
             "optional": true
         },
-        { "type": "decal", "tags": ["ground-deco"], "chance": 0.08, "optional": true }
+        {
+            "type": "decal",
+            "tags": ["ground-deco"],
+            "chance": 0.08,
+            "optional": true
+        }
     ]
 }

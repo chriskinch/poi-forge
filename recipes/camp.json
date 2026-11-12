@@ -2,12 +2,14 @@
     "id": "camp",
     "name": "Camp",
     "description": "A fire in the middle with tents, seats and clutter gathered round it.",
-    "size": { "w": [8, 18, 10], "h": [8, 16, 9] },
+    "size": {
+        "w": [8, 18, 10],
+        "h": [8, 16, 9]
+    },
     "steps": [
         {
             "type": "fill",
-            "tags": ["soil"],
-            "decoTags": ["soil-deco"],
+            "any": ["soil", "grass"],
             "decoChance": 0.1,
             "optional": true
         },
@@ -15,7 +17,9 @@
             "type": "focal",
             "any": ["fire", "light"],
             "anchor": "center",
-            "zone": { "name": "camp" }
+            "zone": {
+                "name": "camp"
+            }
         },
         {
             "type": "ring",
@@ -40,6 +44,11 @@
             "cluster": 0.4,
             "optional": true
         },
-        { "type": "decal", "any": ["bones", "ground-deco"], "chance": 0.04, "optional": true }
+        {
+            "type": "decal",
+            "any": ["bones", "ground-deco"],
+            "chance": 0.04,
+            "optional": true
+        }
     ]
 }
