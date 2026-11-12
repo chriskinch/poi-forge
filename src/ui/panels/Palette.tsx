@@ -96,7 +96,13 @@ export function Palette() {
 
     const instance = swapTarget ? instanceAt(instances, swapTarget.x, swapTarget.y) : undefined;
     const { usable } = useUsablePrefabs();
-    const candidates = instance ? swapCandidates(instance.prefab, usable) : [];
+    // Sheets the map already uses come first: they are the ones that fit it.
+    const inMap = new Set(state.sets.map((set) => set.name));
+    const candidates = instance
+        ? swapCandidates(instance.prefab, usable).sort(
+              (a, b) => Number(inMap.has(b.tileset)) - Number(inMap.has(a.tileset)),
+          )
+        : [];
     const mine = prefabs.filter((prefab) => prefab.tileset === activeTileset);
 
     return (
