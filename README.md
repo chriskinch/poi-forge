@@ -27,6 +27,15 @@ POI_PROJECT=../phasercraft POI_PROFILE=phasercraft npm start
 
 or copy `poi.config.example.json` to `poi.config.json` (git-ignored).
 
+### Hosted build
+
+`npm run build` makes a static site (deployed on Vercel from `main`). With no file
+server it opens the bundled demo, where saves stay in the tab. **Open folder…** picks a
+project folder on your computer (Chrome or Edge) and reads and writes it directly;
+nothing is uploaded. Prefab library edits are kept in that browser, on top of the
+libraries shipped with the build, so curate libraries from a local `npm start` to commit
+them.
+
 The tool reads the project folder and writes only map files (`.tmj`), tileset files
 (`.tsj`) and sheet images (`.png`), only inside the folders the profile names, and only
 when you save or import. It never deletes anything.

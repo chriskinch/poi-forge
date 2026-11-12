@@ -2,21 +2,22 @@
 
 ## Decisions
 
-| Topic        | Decision                                                                                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Form         | Local Vite app: React + Canvas 2D, no game engine. A dev-server plugin reads and writes project files.                                                        |
-| Coupling     | Generic core + swappable profile. The tool lives in its own repo and never changes a game's code.                                                             |
-| Format       | Tiled-native `.tmj` / `.tsj`. Files still open in Tiled.                                                                                                      |
-| Byte-stable  | Loading and saving an untouched file changes nothing; a save after undo restores the original bytes. New objects are written with Tiled's alphabetical keys.  |
-| Generation   | Seeded recipes that compose prefabs by tag. Deterministic. No AI, no example-learning.                                                                        |
-| Recipes      | Built-in archetypes as JSON (entrance, shrine, camp, ruin, grove), driven by sliders. No visual recipe editor.                                                |
-| Tile meaning | Auto-detect prefabs from the sheet's pixels, then confirm and tag by hand. Stretch sets are manual.                                                           |
-| Prefabs      | Stored per tileset in the tool repo, not in `.tsj` (Tiled drops unknown keys) and not in the game.                                                            |
-| Instances    | Not stored. Prefabs are found in a map by matching tiles, so prefab swap works on hand-made maps too.                                                         |
-| Preview      | Live and animated, in the map's surroundings when the profile provides them. Not playable.                                                                    |
-| Surroundings | The Phasercraft profile re-implements the game generator's soil pad (same geometry and autotile table) rather than importing game code.                       |
-| Undo         | One history of immutable snapshots covering the map, tileset definitions and prefab libraries.                                                                |
-| Out of scope | Placing a POI in a host map, running the game's generator, wiring new sheets into the game, a playable walk-test, an AI prompt layer, a visual recipe editor. |
+| Topic        | Decision                                                                                                                                                          |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Form         | Local Vite app: React + Canvas 2D, no game engine. A dev-server plugin reads and writes project files.                                                            |
+| Hosting      | The same app as a static build: bundled demo, or a folder picked through the File System Access API. One file-access interface, three backends (`src/ui/api.ts`). |
+| Coupling     | Generic core + swappable profile. The tool lives in its own repo and never changes a game's code.                                                                 |
+| Format       | Tiled-native `.tmj` / `.tsj`. Files still open in Tiled.                                                                                                          |
+| Byte-stable  | Loading and saving an untouched file changes nothing; a save after undo restores the original bytes. New objects are written with Tiled's alphabetical keys.      |
+| Generation   | Seeded recipes that compose prefabs by tag. Deterministic. No AI, no example-learning.                                                                            |
+| Recipes      | Built-in archetypes as JSON (entrance, shrine, camp, ruin, grove), driven by sliders. No visual recipe editor.                                                    |
+| Tile meaning | Auto-detect prefabs from the sheet's pixels, then confirm and tag by hand. Stretch sets are manual.                                                               |
+| Prefabs      | Stored per tileset in the tool repo, not in `.tsj` (Tiled drops unknown keys) and not in the game.                                                                |
+| Instances    | Not stored. Prefabs are found in a map by matching tiles, so prefab swap works on hand-made maps too.                                                             |
+| Preview      | Live and animated, in the map's surroundings when the profile provides them. Not playable.                                                                        |
+| Surroundings | The Phasercraft profile re-implements the game generator's soil pad (same geometry and autotile table) rather than importing game code.                           |
+| Undo         | One history of immutable snapshots covering the map, tileset definitions and prefab libraries.                                                                    |
+| Out of scope | Placing a POI in a host map, running the game's generator, wiring new sheets into the game, a playable walk-test, an AI prompt layer, a visual recipe editor.     |
 
 ## Data flow
 
