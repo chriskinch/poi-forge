@@ -1,7 +1,7 @@
 {
     "id": "grove",
     "name": "Grove",
-    "description": "A ring of trees around a small clearing, with undergrowth at the edges.",
+    "description": "A ring of trees (or tall mushrooms) around a small clearing, with undergrowth at the edges.",
     "size": {
         "w": [8, 20, 11],
         "h": [8, 18, 11]
@@ -9,7 +9,7 @@
     "steps": [
         {
             "type": "fill",
-            "any": ["grass"],
+            "any": ["grass", "soil"],
             "decoChance": 0.12,
             "optional": true
         },

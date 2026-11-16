@@ -1,0 +1,15 @@
+{
+ "columns": 38,
+ "image": "caveStructures_ [bridgeAnimations].png",
+ "imageheight": 128,
+ "imagewidth": 608,
+ "margin": 0,
+ "name": "caveStructures_ [bridgeAnimations]",
+ "spacing": 0,
+ "tilecount": 304,
+ "tiledversion": "1.12.2",
+ "tileheight": 16,
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10"
+}

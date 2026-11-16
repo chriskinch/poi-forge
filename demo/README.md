@@ -1,6 +1,6 @@
 # Example project
 
-Forest pack from the `fantasy_` asset series by analogStudios (itch.io), copied from the
+The `cave_` pack (version 1.0) from the `fantasy_` asset series by analogStudios (itch.io), copied from the
 Phasercraft game's licensed copy. The `.png` sheets are that pack's art and are not
 covered by this repository's code: do not redistribute them.
 

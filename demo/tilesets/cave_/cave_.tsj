@@ -1,0 +1,281 @@
+{
+ "columns": 22,
+ "image": "cave_.png",
+ "imageheight": 192,
+ "imagewidth": 352,
+ "margin": 0,
+ "name": "cave_",
+ "spacing": 0,
+ "tilecount": 264,
+ "tiledversion": "1.12.2",
+ "tileheight": 16,
+ "tiles": [
+  {
+   "id": 28,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 220,
+     "tileid": 114
+    },
+    {
+     "duration": 220,
+     "tileid": 119
+    },
+    {
+     "duration": 220,
+     "tileid": 124
+    },
+    {
+     "duration": 220,
+     "tileid": 129
+    }
+   ],
+   "id": 114,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 220,
+     "tileid": 115
+    },
+    {
+     "duration": 220,
+     "tileid": 120
+    },
+    {
+     "duration": 220,
+     "tileid": 125
+    },
+    {
+     "duration": 220,
+     "tileid": 130
+    }
+   ],
+   "id": 115,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 220,
+     "tileid": 136
+    },
+    {
+     "duration": 220,
+     "tileid": 141
+    },
+    {
+     "duration": 220,
+     "tileid": 146
+    },
+    {
+     "duration": 220,
+     "tileid": 151
+    }
+   ],
+   "id": 136,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 220,
+     "tileid": 137
+    },
+    {
+     "duration": 220,
+     "tileid": 142
+    },
+    {
+     "duration": 220,
+     "tileid": 147
+    },
+    {
+     "duration": 220,
+     "tileid": 152
+    }
+   ],
+   "id": 137,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 220,
+     "tileid": 180
+    },
+    {
+     "duration": 220,
+     "tileid": 185
+    },
+    {
+     "duration": 220,
+     "tileid": 190
+    },
+    {
+     "duration": 220,
+     "tileid": 195
+    }
+   ],
+   "id": 180,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 220,
+     "tileid": 181
+    },
+    {
+     "duration": 220,
+     "tileid": 186
+    },
+    {
+     "duration": 220,
+     "tileid": 191
+    },
+    {
+     "duration": 220,
+     "tileid": 196
+    }
+   ],
+   "id": 181,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 220,
+     "tileid": 202
+    },
+    {
+     "duration": 220,
+     "tileid": 207
+    },
+    {
+     "duration": 220,
+     "tileid": 212
+    },
+    {
+     "duration": 220,
+     "tileid": 217
+    }
+   ],
+   "id": 202,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 220,
+     "tileid": 203
+    },
+    {
+     "duration": 220,
+     "tileid": 208
+    },
+    {
+     "duration": 220,
+     "tileid": 213
+    },
+    {
+     "duration": 220,
+     "tileid": 218
+    }
+   ],
+   "id": 203,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  }
+ ],
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10"
+}
