@@ -1,15 +1,15 @@
 {
     "version": 1,
-    "tileset": "forest_",
+    "tileset": "cave_",
     "themes": [
-        "forest"
+        "cave"
     ],
     "prefabs": [
         {
-            "id": "grass",
-            "name": "Grass",
+            "id": "floor",
+            "name": "Cave floor",
             "tags": [
-                "grass"
+                "soil"
             ],
             "kind": "decal",
             "w": 1,
@@ -24,10 +24,10 @@
             ]
         },
         {
-            "id": "grass-deco-30",
-            "name": "Grass detail 30",
+            "id": "floor-deco-30",
+            "name": "Worn floor 30",
             "tags": [
-                "grass-deco"
+                "soil-deco"
             ],
             "kind": "decal",
             "w": 1,
@@ -42,10 +42,10 @@
             ]
         },
         {
-            "id": "grass-deco-31",
-            "name": "Grass detail 31",
+            "id": "floor-deco-31",
+            "name": "Worn floor 31",
             "tags": [
-                "grass-deco"
+                "soil-deco"
             ],
             "kind": "decal",
             "w": 1,
@@ -60,46 +60,10 @@
             ]
         },
         {
-            "id": "grass-deco-32",
-            "name": "Grass detail 32",
+            "id": "floor-deco-52",
+            "name": "Worn floor 52",
             "tags": [
-                "grass-deco"
-            ],
-            "kind": "decal",
-            "w": 1,
-            "h": 1,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "ground",
-                    "tile": 32
-                }
-            ]
-        },
-        {
-            "id": "grass-deco-33",
-            "name": "Grass detail 33",
-            "tags": [
-                "grass-deco"
-            ],
-            "kind": "decal",
-            "w": 1,
-            "h": 1,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "ground",
-                    "tile": 33
-                }
-            ]
-        },
-        {
-            "id": "grass-deco-52",
-            "name": "Grass detail 52",
-            "tags": [
-                "grass-deco"
+                "soil-deco"
             ],
             "kind": "decal",
             "w": 1,
@@ -114,10 +78,10 @@
             ]
         },
         {
-            "id": "grass-deco-53",
-            "name": "Grass detail 53",
+            "id": "floor-deco-53",
+            "name": "Worn floor 53",
             "tags": [
-                "grass-deco"
+                "soil-deco"
             ],
             "kind": "decal",
             "w": 1,
@@ -132,10 +96,10 @@
             ]
         },
         {
-            "id": "grass-deco-54",
-            "name": "Grass detail 54",
+            "id": "floor-deco-72",
+            "name": "Worn floor 72",
             "tags": [
-                "grass-deco"
+                "soil-deco"
             ],
             "kind": "decal",
             "w": 1,
@@ -145,244 +109,132 @@
                     "dx": 0,
                     "dy": 0,
                     "layer": "ground",
-                    "tile": 54
-                }
-            ]
-        },
-        {
-            "id": "grass-deco-55",
-            "name": "Grass detail 55",
-            "tags": [
-                "grass-deco"
-            ],
-            "kind": "decal",
-            "w": 1,
-            "h": 1,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "ground",
-                    "tile": 55
-                }
-            ]
-        },
-        {
-            "id": "grass-deco-76",
-            "name": "Grass detail 76",
-            "tags": [
-                "grass-deco"
-            ],
-            "kind": "decal",
-            "w": 1,
-            "h": 1,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "ground",
-                    "tile": 76
-                }
-            ]
-        },
-        {
-            "id": "grass-deco-77",
-            "name": "Grass detail 77",
-            "tags": [
-                "grass-deco"
-            ],
-            "kind": "decal",
-            "w": 1,
-            "h": 1,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "ground",
-                    "tile": 77
-                }
-            ]
-        },
-        {
-            "id": "grass-deco-98",
-            "name": "Grass detail 98",
-            "tags": [
-                "grass-deco"
-            ],
-            "kind": "decal",
-            "w": 1,
-            "h": 1,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "ground",
-                    "tile": 98
-                }
-            ]
-        },
-        {
-            "id": "grass-deco-99",
-            "name": "Grass detail 99",
-            "tags": [
-                "grass-deco"
-            ],
-            "kind": "decal",
-            "w": 1,
-            "h": 1,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "ground",
-                    "tile": 99
-                }
-            ]
-        },
-        {
-            "id": "plateau",
-            "name": "Plateau",
-            "tags": [
-                "backdrop"
-            ],
-            "kind": "stretch",
-            "w": 3,
-            "h": 4,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "structures",
-                    "tile": 23
-                },
-                {
-                    "dx": 1,
-                    "dy": 0,
-                    "layer": "structures",
-                    "tile": 24
-                },
-                {
-                    "dx": 2,
-                    "dy": 0,
-                    "layer": "structures",
-                    "tile": 27
-                },
-                {
-                    "dx": 0,
-                    "dy": 1,
-                    "layer": "structures",
-                    "tile": 45
-                },
-                {
-                    "dx": 1,
-                    "dy": 1,
-                    "layer": "details",
-                    "tile": 46
-                },
-                {
-                    "dx": 2,
-                    "dy": 1,
-                    "layer": "structures",
-                    "tile": 49
-                },
-                {
-                    "dx": 0,
-                    "dy": 2,
-                    "layer": "structures",
-                    "tile": 67
-                },
-                {
-                    "dx": 1,
-                    "dy": 2,
-                    "layer": "details",
-                    "tile": 68
-                },
-                {
-                    "dx": 2,
-                    "dy": 2,
-                    "layer": "structures",
-                    "tile": 71
-                },
-                {
-                    "dx": 0,
-                    "dy": 3,
-                    "layer": "structures",
-                    "tile": 89
-                },
-                {
-                    "dx": 1,
-                    "dy": 3,
-                    "layer": "structures",
-                    "tile": 90
-                },
-                {
-                    "dx": 2,
-                    "dy": 3,
-                    "layer": "structures",
-                    "tile": 93
-                }
-            ],
-            "stretch": {
-                "left": 1,
-                "right": 1
-            }
-        },
-        {
-            "id": "cave-mouth",
-            "name": "Cave mouth",
-            "tags": [
-                "entrance"
-            ],
-            "kind": "fixed",
-            "w": 4,
-            "h": 2,
-            "cells": [
-                {
-                    "dx": 0,
-                    "dy": 0,
-                    "layer": "structures",
                     "tile": 72
-                },
-                {
-                    "dx": 1,
-                    "dy": 0,
-                    "layer": "structures",
-                    "tile": 73
-                },
-                {
-                    "dx": 2,
-                    "dy": 0,
-                    "layer": "structures",
-                    "tile": 74
-                },
-                {
-                    "dx": 3,
-                    "dy": 0,
-                    "layer": "structures",
-                    "tile": 75
-                },
+                }
+            ]
+        },
+        {
+            "id": "floor-deco-73",
+            "name": "Worn floor 73",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
                 {
                     "dx": 0,
-                    "dy": 1,
-                    "layer": "structures",
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 73
+                }
+            ]
+        },
+        {
+            "id": "floor-deco-74",
+            "name": "Worn floor 74",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 74
+                }
+            ]
+        },
+        {
+            "id": "floor-deco-75",
+            "name": "Worn floor 75",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
+                    "tile": 75
+                }
+            ]
+        },
+        {
+            "id": "floor-deco-94",
+            "name": "Worn floor 94",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
                     "tile": 94
-                },
+                }
+            ]
+        },
+        {
+            "id": "floor-deco-95",
+            "name": "Worn floor 95",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
                 {
-                    "dx": 1,
-                    "dy": 1,
-                    "layer": "structures",
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
                     "tile": 95
-                },
+                }
+            ]
+        },
+        {
+            "id": "floor-deco-96",
+            "name": "Worn floor 96",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
                 {
-                    "dx": 2,
-                    "dy": 1,
-                    "layer": "structures",
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
                     "tile": 96
-                },
+                }
+            ]
+        },
+        {
+            "id": "floor-deco-97",
+            "name": "Worn floor 97",
+            "tags": [
+                "soil-deco"
+            ],
+            "kind": "decal",
+            "w": 1,
+            "h": 1,
+            "cells": [
                 {
-                    "dx": 3,
-                    "dy": 1,
-                    "layer": "structures",
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "ground",
                     "tile": 97
                 }
             ]
@@ -574,6 +426,44 @@
                     "tile": 137
                 }
             ]
+        },
+        {
+            "id": "lava-pool",
+            "name": "Lava pool",
+            "tags": [
+                "fountain",
+                "lava"
+            ],
+            "kind": "fixed",
+            "w": 2,
+            "h": 2,
+            "cells": [
+                {
+                    "dx": 0,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 180
+                },
+                {
+                    "dx": 1,
+                    "dy": 0,
+                    "layer": "details",
+                    "tile": 181
+                },
+                {
+                    "dx": 0,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 202
+                },
+                {
+                    "dx": 1,
+                    "dy": 1,
+                    "layer": "details",
+                    "tile": 203
+                }
+            ],
+            "weight": 0.6
         }
     ]
 }

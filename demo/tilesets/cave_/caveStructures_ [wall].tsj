@@ -1,17 +1,117 @@
 {
  "columns": 15,
- "image": "forest_ [fencesAndWalls].png",
- "imageheight": 192,
+ "image": "caveStructures_ [wall].png",
+ "imageheight": 128,
  "imagewidth": 240,
  "margin": 0,
- "name": "forest_ [fencesAndWalls]",
+ "name": "caveStructures_ [wall]",
  "spacing": 0,
- "tilecount": 180,
+ "tilecount": 120,
  "tiledversion": "1.12.2",
  "tileheight": 16,
  "tiles": [
   {
-   "id": 61,
+   "id": 31,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 48,
    "properties": [
     {
      "name": "collides",
@@ -31,7 +131,7 @@
    ]
   },
   {
-   "id": 63,
+   "id": 64,
    "properties": [
     {
      "name": "collides",
@@ -41,7 +141,7 @@
    ]
   },
   {
-   "id": 91,
+   "id": 83,
    "properties": [
     {
      "name": "collides",
@@ -51,7 +151,7 @@
    ]
   },
   {
-   "id": 92,
+   "id": 85,
    "properties": [
     {
      "name": "collides",
@@ -61,7 +161,7 @@
    ]
   },
   {
-   "id": 93,
+   "id": 86,
    "properties": [
     {
      "name": "collides",
@@ -71,87 +171,7 @@
    ]
   },
   {
-   "id": 94,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 107,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 108,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 122,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 124,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 143,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 145,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 146,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 148,
+   "id": 88,
    "properties": [
     {
      "name": "collides",

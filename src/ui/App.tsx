@@ -35,7 +35,7 @@ function NewMap({ onClose }: { onClose: () => void }) {
                 <input
                     autoFocus
                     value={name}
-                    placeholder="forest-shrine"
+                    placeholder="cave-shrine"
                     onChange={(event) => setName(event.target.value)}
                     data-testid="new-name"
                 />

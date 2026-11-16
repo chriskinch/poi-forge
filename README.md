@@ -16,7 +16,7 @@ Needs Node 22+.
 
 ```sh
 npm install
-npm start            # http://localhost:5199, opens the bundled forest example
+npm start            # http://localhost:5199, opens the bundled cave example
 ```
 
 To work on a real project, point the tool at its folder and pick a profile:
@@ -42,11 +42,12 @@ when you save or import. It never deletes anything.
 
 ## The example project
 
-`demo/` is a small project built on the forest pack of the `fantasy_` series
-(analogStudios): terrain with a plateau and cave mouth, paths, resources, fences and
-walls, an animated fountain. `npm run demo:build` derives everything else from the
-sheets: collision and animations in each `.tsj`, the prefab libraries in
-`libraries/generic/`, and one generated map per recipe.
+`demo/` is a small project built on the `cave_` pack of the `fantasy_` series
+(analogStudios): cave floor with ponds and lava pools, a cliff set with three kinds of
+doorway, mushrooms, rocks and ores, braziers, a fountain and portal, ruined walls and a
+railway with minecarts. `npm run demo:build` derives everything else from the sheets:
+collision and animations in each `.tsj`, the prefab libraries in `libraries/generic/`,
+and one generated map per recipe.
 
 The sheets are licensed art, included here as the example. Keep this repository and its
 deployment private, or swap the sheets out, before sharing either.
@@ -160,7 +161,7 @@ src/ui/        React app (Canvas 2D), state in one zustand store
 server/        Vite plugin: the file API
 recipes/       generator recipes
 libraries/     prefab libraries per profile
-demo/          example project: forest sheets + generated .tsj and maps (generic profile)
+demo/          example project: cave pack sheets + generated .tsj and maps (generic profile)
 fixtures/      map and tileset JSON from Phasercraft, for tests (no art)
 ```
 

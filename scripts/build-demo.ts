@@ -1,6 +1,6 @@
 /**
- * Builds the bundled example project from the forest sheets in
- * demo/tilesets/forest_/: a .tsj per sheet (collision and animations), the
+ * Builds the bundled example project from the cave pack sheets in
+ * demo/tilesets/cave_/: a .tsj per sheet (collision and animations), the
  * prefab libraries, and one generated map per recipe.
  *
  *   npm run demo:build
@@ -23,8 +23,8 @@ import { generic } from "../src/profiles/generic";
 import { decodePng } from "./png";
 
 const ROOT = resolve(import.meta.dirname, "..");
-const DIR = "tilesets/forest_";
-const THEME = "forest";
+const DIR = "tilesets/cave_";
+const THEME = "cave";
 const [GROUND, DETAILS, STRUCTURES, OVERHEAD] = generic.tileLayers as [
     string,
     string,
@@ -76,52 +76,26 @@ interface Sheet {
 
 const SHEETS: Sheet[] = [
     {
-        name: "forest_",
+        name: "cave_",
         specs: [
             {
-                id: "grass",
-                name: "Grass",
-                tags: ["grass"],
+                id: "floor",
+                name: "Cave floor",
+                tags: ["soil"],
                 rows: [[46]],
                 kind: "decal",
                 layer: GROUND,
             },
             ...many(
-                "grass-deco",
-                "Grass detail",
-                ["grass-deco"],
-                [30, 31, 32, 33, 52, 53, 54, 55, 76, 77, 98, 99],
+                "floor-deco",
+                "Worn floor",
+                ["soil-deco"],
+                [30, 31, 52, 53, 72, 73, 74, 75, 94, 95, 96, 97],
                 {
                     kind: "decal",
                     layer: GROUND,
                 },
             ),
-            {
-                id: "plateau",
-                name: "Plateau",
-                tags: ["backdrop"],
-                rows: [
-                    [23, 24, 27],
-                    [45, 46, 49],
-                    [67, 68, 71],
-                    [89, 90, 93],
-                ],
-                kind: "stretch",
-                layer: STRUCTURES,
-                stretch: [1, 1],
-                // The plateau's top is the ordinary grass tile.
-                flat: [46, 68],
-            },
-            {
-                id: "cave-mouth",
-                name: "Cave mouth",
-                tags: ["entrance"],
-                rows: [
-                    [72, 73, 74, 75],
-                    [94, 95, 96, 97],
-                ],
-                layer: STRUCTURES,
-            },
             {
                 id: "mound",
                 name: "Mound",
@@ -165,79 +139,135 @@ const SHEETS: Sheet[] = [
                 layer: DETAILS,
                 solid: true,
             },
-        ],
-        animations: [{ col: 4, row: 5, w: 2, h: 2, strideX: 5, duration: 220 }],
-    },
-    {
-        name: "forestPath_",
-        specs: [
             {
-                id: "soil",
-                name: "Soil",
-                tags: ["soil"],
-                rows: [[28]],
-                kind: "decal",
-                layer: GROUND,
-            },
-            ...many("soil-deco", "Worn soil", ["soil-deco"], [14, 22, 29, 30], {
-                kind: "decal",
-                layer: GROUND,
-            }),
-        ],
-    },
-    {
-        name: "forest_ [resources]",
-        specs: [
-            { id: "tree-olive", name: "Olive tree", tags: ["tree"], rows: [[13], [25]] },
-            { id: "tree-autumn", name: "Autumn tree", tags: ["tree"], rows: [[14], [26]] },
-            {
-                id: "tree-blossom",
-                name: "Blossom tree",
-                tags: ["tree"],
+                id: "lava-pool",
+                name: "Lava pool",
+                tags: ["fountain", "lava"],
                 rows: [
-                    [16, 17],
-                    [28, 29],
+                    [180, 181],
+                    [202, 203],
                 ],
+                layer: DETAILS,
+                solid: true,
                 weight: 0.6,
             },
-            { id: "tree-pine", name: "Pine", tags: ["tree"], rows: [[18], [30]] },
-            ...many("mushroom", "Mushroom", ["plant"], [19, 20, 21, 22, 31, 32, 33, 34], {
+        ],
+        animations: [
+            { col: 4, row: 5, w: 2, h: 2, strideX: 5, duration: 220 },
+            { col: 4, row: 8, w: 2, h: 2, strideX: 5, duration: 220 },
+        ],
+    },
+    {
+        name: "cave_ [cliff]",
+        specs: [
+            {
+                id: "ridge",
+                name: "Cliff ridge",
+                tags: ["backdrop"],
+                rows: [
+                    [47, 49, null, 50, 49],
+                    [93, 141, null, 142, 95],
+                    [323, 324, 324, 324, 325],
+                    [369, 370, 370, 370, 371],
+                    [415, 416, 416, 416, 417],
+                ],
+                kind: "stretch",
                 layer: STRUCTURES,
-                weight: 0.3,
-            }),
-            { id: "bush", name: "Bush", tags: ["plant"], rows: [[37]], layer: STRUCTURES },
-            { id: "bushes", name: "Bushes", tags: ["plant"], rows: [[49]], layer: STRUCTURES },
+                stretch: [2, 2],
+                // The plateau's top is ordinary cave floor.
+                flat: [141, 142],
+            },
+            {
+                id: "arch-stone",
+                name: "Stone arch",
+                tags: ["entrance"],
+                rows: [
+                    [338, 339, 340],
+                    [384, 385, 386],
+                    [430, 431, 432],
+                ],
+                layer: STRUCTURES,
+            },
+            {
+                id: "mine-entrance",
+                name: "Mine entrance",
+                tags: ["entrance"],
+                rows: [
+                    [200, 201, 202],
+                    [246, 247, 248],
+                    [292, 293, 294],
+                ],
+                layer: STRUCTURES,
+            },
+            {
+                id: "cave-mouth",
+                name: "Cave mouth",
+                tags: ["entrance"],
+                rows: [
+                    [62, 63, 64],
+                    [108, 109, 110],
+                    [154, 155, 156],
+                ],
+                layer: STRUCTURES,
+            },
+            ...many(
+                "pebbles",
+                "Pebbled floor",
+                ["soil-deco"],
+                [282, 283, 328, 329, 374, 375, 376, 377, 420, 421, 422, 423],
+                {
+                    kind: "decal",
+                    layer: GROUND,
+                    weight: 0.5,
+                },
+            ),
+        ],
+    },
+    {
+        name: "caveObjects_",
+        specs: [
+            {
+                id: "mushroom-brown-tall",
+                name: "Tall brown mushroom",
+                tags: ["plant", "tree"],
+                rows: [[12], [23]],
+            },
+            {
+                id: "mushroom-orange-tall",
+                name: "Tall orange mushroom",
+                tags: ["plant", "tree"],
+                rows: [[13], [24]],
+            },
+            ...many(
+                "mushroom",
+                "Mushroom",
+                ["plant"],
+                [17, 18, 19, 20, 28, 29, 30, 31, 41, 42, 52, 53],
+                { layer: STRUCTURES, weight: 0.3 },
+            ),
             {
                 id: "rock-big",
                 name: "Big rock",
                 tags: ["rock"],
                 rows: [
-                    [38, 39],
-                    [50, 51],
+                    [35, 36],
+                    [46, 47],
                 ],
             },
-            { id: "rock", name: "Rock", tags: ["rock-small"], rows: [[40]], layer: STRUCTURES },
-            { id: "rocks", name: "Rocks", tags: ["rock-small"], rows: [[52]], layer: STRUCTURES },
-            ...many("ore", "Ore rock", ["rock-small", "ore"], [41, 42, 53, 54], {
+            ...many("rock", "Rock", ["rock-small"], [48, 49], { layer: STRUCTURES }),
+            ...many("ore", "Ore rock", ["rock-small", "ore"], [39, 40, 50, 51], {
                 layer: STRUCTURES,
                 weight: 0.4,
             }),
-            ...many(
-                "flower",
-                "Flowers",
-                ["ground-deco", "flower"],
-                [43, 44, 45, 46, 55, 56, 57, 58, 67, 68, 69, 70, 79, 80, 81, 82],
-                {
-                    kind: "decal",
-                    layer: DETAILS,
-                },
-            ),
-            { id: "chest", name: "Chest", tags: ["clutter"], rows: [[61], [73]] },
+            { id: "grave-a", name: "Gravestone A", tags: ["grave"], rows: [[56], [67]] },
+            { id: "grave-b", name: "Gravestone B", tags: ["grave"], rows: [[57], [68]] },
+            { id: "grave-c", name: "Gravestone C", tags: ["grave"], rows: [[58], [69]] },
+            { id: "chest", name: "Chest", tags: ["clutter"], rows: [[59], [70]] },
             {
                 id: "chest-open",
                 name: "Open chest",
                 tags: ["clutter"],
-                rows: [[62], [74]],
+                rows: [[60], [71]],
                 weight: 0.5,
             },
             {
@@ -245,8 +275,8 @@ const SHEETS: Sheet[] = [
                 name: "Big chest",
                 tags: ["clutter"],
                 rows: [
-                    [63, 64],
-                    [75, 76],
+                    [79, 80],
+                    [90, 91],
                 ],
                 weight: 0.5,
             },
@@ -255,61 +285,102 @@ const SHEETS: Sheet[] = [
                 name: "Big open chest",
                 tags: ["clutter"],
                 rows: [
-                    [65, 66],
-                    [77, 78],
+                    [81, 82],
+                    [92, 93],
                 ],
                 weight: 0.3,
             },
-            { id: "sign", name: "Sign", tags: ["sign"], rows: [[85], [97]] },
-            { id: "grave-a", name: "Gravestone A", tags: ["grave"], rows: [[86], [98]] },
-            { id: "grave-b", name: "Gravestone B", tags: ["grave"], rows: [[87], [99]] },
-            { id: "grave-c", name: "Gravestone C", tags: ["grave"], rows: [[88], [100]] },
+            { id: "sign", name: "Sign", tags: ["sign"], rows: [[78], [89]] },
             {
                 id: "campfire-unlit",
                 name: "Unlit campfire",
                 tags: ["clutter"],
-                rows: [[102]],
-                layer: STRUCTURES,
+                rows: [[100], [111]],
                 weight: 0.5,
             },
-            { id: "campfire", name: "Campfire", tags: ["fire"], rows: [[91], [103]], weight: 4 },
+            { id: "campfire", name: "Campfire", tags: ["fire"], rows: [[101], [112]], weight: 4 },
         ],
-        animations: [{ col: 7, row: 7, w: 1, h: 2, strideX: 1, duration: 140 }],
+        animations: [{ col: 2, row: 9, w: 1, h: 2, strideX: 1, duration: 140 }],
     },
     {
-        name: "forest_ [fencesAndWalls]",
+        name: "caveStructures_ [fountainPortalBridge]",
         specs: [
             {
-                id: "fence",
-                name: "Wooden fence",
-                tags: ["fence"],
-                rows: [[61, 62, 63]],
-                kind: "stretch",
+                id: "brazier-lit",
+                name: "Lit brazier",
+                tags: ["light"],
+                rows: [
+                    [21, 22],
+                    [39, 40],
+                ],
                 layer: STRUCTURES,
-                stretch: [1, 1],
             },
             {
-                id: "wall",
-                name: "Stone wall",
-                tags: ["wall"],
+                id: "brazier",
+                name: "Unlit brazier",
+                tags: ["clutter"],
                 rows: [
-                    [77, 78, 79],
-                    [92, 93, 94],
+                    [19, 20],
+                    [37, 38],
                 ],
+                layer: STRUCTURES,
                 weight: 0.5,
             },
-            { id: "pillar", name: "Stone pillar", tags: ["pillar"], rows: [[76], [91]] },
-            ...many("block", "Stone block", ["pillar", "seat"], [107, 122, 124], {
+            {
+                id: "rubble-block",
+                name: "Rubble block",
+                tags: ["wall", "clutter"],
+                rows: [
+                    [33, 34],
+                    [51, 52],
+                ],
                 layer: STRUCTURES,
-            }),
-            { id: "lantern", name: "Lantern", tags: ["light"], rows: [[108]], layer: STRUCTURES },
+                weight: 0.5,
+            },
+            {
+                id: "fountain",
+                name: "Fountain",
+                tags: ["fountain", "shrine"],
+                rows: [
+                    [55, 56, 57, 58],
+                    [73, 74, 75, 76],
+                    [91, 92, 93, 94],
+                    [109, 110, 111, 112],
+                    [127, 128, 129, 130],
+                ],
+                layer: STRUCTURES,
+                overheadRows: 1,
+            },
+            {
+                id: "pool",
+                name: "Small pool",
+                tags: ["fountain"],
+                rows: [
+                    [155, 156],
+                    [173, 174],
+                    [191, 192],
+                ],
+                layer: STRUCTURES,
+                overheadRows: 1,
+            },
+            {
+                id: "portal",
+                name: "Portal",
+                tags: ["shrine", "portal"],
+                rows: [
+                    [199, 200, 201],
+                    [217, 218, 219],
+                    [235, 236, 237],
+                ],
+            },
             {
                 id: "ruined-arch",
                 name: "Ruined arch",
                 tags: ["wall", "arch"],
                 rows: [
-                    [128, 129, 130],
-                    [143, 144, 145],
+                    [145, 146, 147],
+                    [163, 164, 165],
+                    [181, 182, 183],
                 ],
                 weight: 0.4,
             },
@@ -317,39 +388,111 @@ const SHEETS: Sheet[] = [
                 id: "pillar-left",
                 name: "Broken pillar (left)",
                 tags: ["pillar"],
-                rows: [[131], [146]],
+                rows: [[148], [166], [184]],
             },
             {
                 id: "pillar-right",
                 name: "Broken pillar (right)",
                 tags: ["pillar"],
-                rows: [[133], [148]],
+                rows: [[150], [168], [186]],
+            },
+            {
+                id: "stone-deck",
+                name: "Stone deck",
+                tags: ["apron"],
+                rows: [[321], [339]],
+                kind: "decal",
+                layer: DETAILS,
+            },
+        ],
+        animations: [
+            { col: 3, row: 1, w: 2, h: 2, strideX: 2, duration: 150 },
+            { col: 1, row: 3, w: 4, h: 5, strideX: 4, duration: 180 },
+            { col: 1, row: 11, w: 3, h: 3, strideX: 3, duration: 160 },
+        ],
+    },
+    {
+        name: "caveStructures_ [wall]",
+        specs: [
+            {
+                id: "wall",
+                name: "Stone wall",
+                tags: ["wall"],
+                rows: [
+                    [17, 18, 19],
+                    [32, 33, 34],
+                ],
+                weight: 0.5,
+            },
+            {
+                id: "wall-long",
+                name: "Long stone wall",
+                tags: ["wall"],
+                rows: [
+                    [23, 24, 25, 26, 27],
+                    [38, 39, 40, 41, 42],
+                ],
+                weight: 0.3,
+            },
+            { id: "pillar", name: "Stone pillar", tags: ["pillar"], rows: [[16], [31]] },
+            ...many("block", "Stone block", ["pillar", "seat"], [47, 62, 64], {
+                layer: STRUCTURES,
+            }),
+            {
+                id: "lantern",
+                name: "Lantern",
+                tags: ["light"],
+                rows: [[48]],
+                layer: STRUCTURES,
+                weight: 0.5,
+            },
+            {
+                id: "ruined-arch",
+                name: "Ruined arch",
+                tags: ["wall", "arch"],
+                rows: [
+                    [53, 54, 55],
+                    [68, 69, 70],
+                    [83, 84, 85],
+                ],
+                weight: 0.4,
+            },
+            {
+                id: "pillar-left",
+                name: "Broken pillar (left)",
+                tags: ["pillar"],
+                rows: [[56], [71], [86]],
+            },
+            {
+                id: "pillar-right",
+                name: "Broken pillar (right)",
+                tags: ["pillar"],
+                rows: [[58], [73], [88]],
             },
         ],
     },
     {
-        name: "forest_ [fountain]",
+        name: "railway_",
         specs: [
             {
-                id: "fountain",
-                name: "Fountain",
-                tags: ["fountain", "shrine"],
-                rows: [
-                    [1, 2, 3, 4],
-                    [19, 20, 21, 22],
-                    [37, 38, 39, 40],
-                    [55, 56, 57, 58],
-                    [73, 74, 75, 76],
-                ],
-                layer: STRUCTURES,
-                overheadRows: 1,
+                id: "minecart",
+                name: "Minecart",
+                tags: ["clutter", "minecart"],
+                rows: [[22], [30]],
+                weight: 0.6,
+            },
+            {
+                id: "rail",
+                name: "Rail",
+                tags: ["rail"],
+                rows: [[10, 11, 12]],
+                kind: "stretch",
+                layer: DETAILS,
+                stretch: [1, 1],
             },
         ],
-        animations: [{ col: 1, row: 0, w: 4, h: 5, strideX: 4, duration: 180 }],
     },
-    { name: "forest_ [bridgeAnimatedTiles]", specs: [] },
-    { name: "forest_ [bridgeHorizontal]", specs: [] },
-    { name: "forest_ [bridgeVertical]", specs: [] },
+    { name: "caveStructures_ [bridgeAnimations]", specs: [] },
 ];
 
 function write(path: string, data: string) {
@@ -394,6 +537,9 @@ for (const sheet of SHEETS) {
             }),
         );
         if (!cells.length) throw new Error(`${sheet.name}: prefab "${spec.id}" has no art`);
+        // Rows listed in case the art spills into them, but empty on this sheet.
+        const top = Math.min(...cells.map((cell) => cell.dy));
+        for (const cell of cells) cell.dy -= top;
         const solid = cells.filter(
             (cell) =>
                 !spec.flat?.includes(cell.tile) &&
@@ -412,7 +558,7 @@ for (const sheet of SHEETS) {
             tags: spec.tags,
             kind,
             w: spec.rows[0]!.length,
-            h: height,
+            h: height - top,
             cells,
             ...(spec.stretch ? { stretch: { left: spec.stretch[0], right: spec.stretch[1] } } : {}),
             ...(spec.weight ? { weight: spec.weight } : {}),
@@ -468,7 +614,7 @@ MAPS.forEach(([recipeId, width, height, seed], i) => {
         },
     );
     if (result.problems.length) throw new Error(`${recipeId}: ${result.problems.join("; ")}`);
-    const mapPath = `maps/forest-${recipeId}.tmj`;
+    const mapPath = `maps/cave-${recipeId}.tmj`;
     const { map } = resultToMap(result, {
         mapPath,
         catalog,

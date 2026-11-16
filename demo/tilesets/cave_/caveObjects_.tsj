@@ -1,15 +1,35 @@
 {
- "columns": 12,
- "image": "forest_ [resources].png",
- "imageheight": 160,
- "imagewidth": 192,
+ "columns": 11,
+ "image": "caveObjects_.png",
+ "imageheight": 192,
+ "imagewidth": 176,
  "margin": 0,
- "name": "forest_ [resources]",
+ "name": "caveObjects_",
  "spacing": 0,
- "tilecount": 120,
+ "tilecount": 132,
  "tiledversion": "1.12.2",
  "tileheight": 16,
  "tiles": [
+  {
+   "id": 17,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
   {
    "id": 19,
    "properties": [
@@ -31,7 +51,7 @@
    ]
   },
   {
-   "id": 21,
+   "id": 23,
    "properties": [
     {
      "name": "collides",
@@ -41,27 +61,7 @@
    ]
   },
   {
-   "id": 22,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 25,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 26,
+   "id": 24,
    "properties": [
     {
      "name": "collides",
@@ -111,37 +111,7 @@
    ]
   },
   {
-   "id": 32,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 33,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 34,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 37,
+   "id": 39,
    "properties": [
     {
      "name": "collides",
@@ -172,6 +142,36 @@
   },
   {
    "id": 42,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 48,
    "properties": [
     {
      "name": "collides",
@@ -231,7 +231,7 @@
    ]
   },
   {
-   "id": 54,
+   "id": 67,
    "properties": [
     {
      "name": "collides",
@@ -241,7 +241,7 @@
    ]
   },
   {
-   "id": 73,
+   "id": 68,
    "properties": [
     {
      "name": "collides",
@@ -251,7 +251,7 @@
    ]
   },
   {
-   "id": 74,
+   "id": 69,
    "properties": [
     {
      "name": "collides",
@@ -261,7 +261,7 @@
    ]
   },
   {
-   "id": 75,
+   "id": 70,
    "properties": [
     {
      "name": "collides",
@@ -271,7 +271,7 @@
    ]
   },
   {
-   "id": 76,
+   "id": 71,
    "properties": [
     {
      "name": "collides",
@@ -281,7 +281,7 @@
    ]
   },
   {
-   "id": 77,
+   "id": 89,
    "properties": [
     {
      "name": "collides",
@@ -291,7 +291,7 @@
    ]
   },
   {
-   "id": 78,
+   "id": 90,
    "properties": [
     {
      "name": "collides",
@@ -301,28 +301,7 @@
    ]
   },
   {
-   "animation": [
-    {
-     "duration": 140,
-     "tileid": 91
-    },
-    {
-     "duration": 140,
-     "tileid": 92
-    },
-    {
-     "duration": 140,
-     "tileid": 93
-    },
-    {
-     "duration": 140,
-     "tileid": 94
-    }
-   ],
-   "id": 91
-  },
-  {
-   "id": 97,
+   "id": 91,
    "properties": [
     {
      "name": "collides",
@@ -332,7 +311,7 @@
    ]
   },
   {
-   "id": 98,
+   "id": 92,
    "properties": [
     {
      "name": "collides",
@@ -342,27 +321,7 @@
    ]
   },
   {
-   "id": 99,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 100,
-   "properties": [
-    {
-     "name": "collides",
-     "type": "bool",
-     "value": true
-    }
-   ]
-  },
-  {
-   "id": 102,
+   "id": 93,
    "properties": [
     {
      "name": "collides",
@@ -373,6 +332,14 @@
   },
   {
    "animation": [
+    {
+     "duration": 140,
+     "tileid": 101
+    },
+    {
+     "duration": 140,
+     "tileid": 102
+    },
     {
      "duration": 140,
      "tileid": 103
@@ -380,17 +347,40 @@
     {
      "duration": 140,
      "tileid": 104
-    },
-    {
-     "duration": 140,
-     "tileid": 105
-    },
-    {
-     "duration": 140,
-     "tileid": 106
     }
    ],
-   "id": 103,
+   "id": 101
+  },
+  {
+   "id": 111,
+   "properties": [
+    {
+     "name": "collides",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "animation": [
+    {
+     "duration": 140,
+     "tileid": 112
+    },
+    {
+     "duration": 140,
+     "tileid": 113
+    },
+    {
+     "duration": 140,
+     "tileid": 114
+    },
+    {
+     "duration": 140,
+     "tileid": 115
+    }
+   ],
+   "id": 112,
    "properties": [
     {
      "name": "collides",
